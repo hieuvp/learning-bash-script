@@ -9,6 +9,31 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
+Introduction
+A First Look at Shell Scripts
+Variables
+If, Then, Else
+Input and Output
+Control Flow
+Variables 2
+Handling Script Parameters
+Shell Functions
+Fun with Strings
+Many Ways to Run Your Script
+
+introduction
+a-first-look-at-shell-scripts
+variables
+if,-then,-else
+input-and-output
+control-flow
+variables 2
+handling-script-parameters
+shell-functions
+fun-with-strings
+many-ways-to-run-your-script
+
+
 ## References
 
 - [Shell Scripting with Bash](https://app.pluralsight.com/library/courses/bash-shell-scripting/table-of-contents)
