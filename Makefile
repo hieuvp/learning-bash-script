@@ -2,13 +2,13 @@ include .env
 
 .PHONY: fmt
 fmt:
-	@echo "fmt"
+	$(SCRIPT_PATH)/fmt-shell.sh
+	$(SCRIPT_PATH)/fmt-markdown.sh
 
 .PHONY: lint
 lint:
-	@echo "lint"
+	$(SCRIPT_PATH)/lint-shell.sh
 
 .PHONY: git-add
 git-add: fmt lint
-	@echo $(SCRIPT_PATH)
 	git add .

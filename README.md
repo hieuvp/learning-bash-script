@@ -21,7 +21,6 @@
 1. [Fun with Strings](fun-with-strings/README.md)
 1. [Many Ways to Run Your Script](many-ways-to-run-your-script/README.md)
 
-
 ## References
 
 - [Shell Scripting with Bash](https://app.pluralsight.com/library/courses/bash-shell-scripting/table-of-contents)
