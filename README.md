@@ -9,29 +9,17 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-Introduction
-A First Look at Shell Scripts
-Variables
-If, Then, Else
-Input and Output
-Control Flow
-Variables 2
-Handling Script Parameters
-Shell Functions
-Fun with Strings
-Many Ways to Run Your Script
-
-introduction
-a-first-look-at-shell-scripts
-variables
-if,-then,-else
-input-and-output
-control-flow
-variables 2
-handling-script-parameters
-shell-functions
-fun-with-strings
-many-ways-to-run-your-script
+1. [Introduction](introduction/README.md)
+1. [A First Look at Shell Scripts](a-first-look-at-shell-scripts/README.md)
+1. [Variables](variables/README.md)
+1. [If, Then, Else](if-then-else/README.md)
+1. [Input and Output](input-and-output/README.md)
+1. [Control Flow](control-flow/README.md)
+1. [Variables 2](variables-2/README.md)
+1. [Handling Script Parameters](handling-script-parameters/README.md)
+1. [Shell Functions](shell-functions/README.md)
+1. [Fun with Strings](fun-with-strings/README.md)
+1. [Many Ways to Run Your Script](many-ways-to-run-your-script/README.md)
 
 
 ## References
