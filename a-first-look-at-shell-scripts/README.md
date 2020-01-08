@@ -23,6 +23,11 @@
 
 ```shell script
 chmod u+x hw
+# --> should add to fmt-shell.sh?
+```
+
+```shell script
+chmod u-x hw
 ```
 
 ## Demo: A Note-Taking Script
