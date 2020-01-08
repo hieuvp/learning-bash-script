@@ -21,6 +21,10 @@
 
 ## Creating A Shell Script
 
+```shell script
+chmod u+x hw
+```
+
 ## Demo: A Note-Taking Script
 
 ## Calling The Script
