@@ -22,13 +22,17 @@
 ## Creating A Shell Script
 
 ```shell script
-chmod u+x hw
+chmod u+x filename
 # --> should add to fmt-shell.sh?
 ```
 
 ```shell script
-chmod u-x hw
+chmod a+x filename
+chmod u-x filename
+chmod a-x filename
 ```
+
+shebang: pronounce
 
 ## Demo: A Note-Taking Script
 
