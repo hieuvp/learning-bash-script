@@ -34,6 +34,21 @@ chmod a-x filename
 
 shebang: pronounce
 
+<!-- AUTO-GENERATED-CONTENT:START (CODE:src=labs/take-note.sh) -->
+<!-- The below code snippet is automatically added from labs/take-note.sh -->
+
+```sh
+#!/usr/bin/env bash
+
+echo "Hello, world"
+```
+
+```shell script
+
+```
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
 ## Demo: A Note-Taking Script
 
 ## Calling The Script
