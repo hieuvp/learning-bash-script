@@ -40,11 +40,17 @@ shebang: pronounce
 ```sh
 #!/usr/bin/env bash
 
-echo "Hello, world"
-```
+# $1?
+# $@?
+# $*: hold all arguments?
 
-```shell script
+# Command substitution
+# $(date)
 
+# > vs >>
+
+#echo $(date): $* >> ~/notes.txt
+#echo Note saved: $*
 ```
 
 <!-- AUTO-GENERATED-CONTENT:END -->
