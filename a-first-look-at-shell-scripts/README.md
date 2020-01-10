@@ -61,9 +61,23 @@ shebang: pronounce
 
 ## The Shebang
 
+```shell script
+#!/usr/bin/env bash
+```
+
+```shell script
+#!/bin/bash
+```
+
+Comparison
+
 ## Naming Your Script
 
 ## Demo: The type Command
+
+```shell script
+type ls
+```
 
 ## Summary
 
