@@ -21,6 +21,11 @@
 
 ## Demo: Variables
 
+```shell script
+$ echo $USER
+hieu.van
+```
+
 ## Variable Basics
 
 ## Using Variables in A Script
