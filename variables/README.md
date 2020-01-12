@@ -17,6 +17,14 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
+<https://www.linux.com/tutorials/all-about-curly-braces-bash/>
+`{Curly Braces}`
+`parenthesis ()`
+
+Create another PR for this?
+<https://www.assertnotmagic.com/2018/06/20/bash-brackets-quick-reference/>
+<https://linuxconfig.org/bash-scripting-parenthesis-explained>
+
 ## Introduction
 
 ## Demo: Variables
