@@ -49,6 +49,18 @@ Good morning,
 
 ## Variable Basics
 
+variables are case-sensitive
+
+Uppercase variables
+
+- Bash has many pre-defined variables
+- PATH, HOME, SECONDS, IFS, etc.
+- You don't want to override them by mistake
+
+Good habit
+
+- Use lower-case name for your variable
+
 ## Using Variables in A Script
 
 ## Using Variables: Good Habits
