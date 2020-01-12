@@ -42,6 +42,11 @@ echo "$userGreeting"
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 ```shell script
+man read
+tldr read
+```
+
+```shell script
 $ labs/demo.sh
 Good morning, hieu.van
 Good morning,
