@@ -26,6 +26,18 @@ $ echo $USER
 hieu.van
 ```
 
+<!-- AUTO-GENERATED-CONTENT:START (CODE:src=labs/demo.sh) -->
+<!-- The below code snippet is automatically added from labs/demo.sh -->
+
+```sh
+#!/usr/bin/env bash
+
+greeting="Good morning"
+echo "$greeting, $USER"
+```
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
 ## Variable Basics
 
 ## Using Variables in A Script
