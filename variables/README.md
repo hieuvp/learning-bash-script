@@ -21,11 +21,6 @@
 
 ## Demo: Variables
 
-```shell script
-$ echo $USER
-hieu.van
-```
-
 <!-- AUTO-GENERATED-CONTENT:START (CODE:src=labs/demo.sh) -->
 <!-- The below code snippet is automatically added from labs/demo.sh -->
 
@@ -34,9 +29,23 @@ hieu.van
 
 greeting="Good morning"
 echo "$greeting, $USER"
+
+userGreeting="$greeting, $USER"
+echo "$userGreeting"
+
+# Case sensitive
+# echo "$greeting, $user"
+
+# Finding more global variables as USER above
 ```
 
 <!-- AUTO-GENERATED-CONTENT:END -->
+
+```shell script
+$ labs/demo.sh
+Good morning, hieu.van
+Good morning,
+```
 
 ## Variable Basics
 
