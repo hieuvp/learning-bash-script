@@ -6,3 +6,5 @@ set -eoux pipefail
 read -r note
 
 echo "$note"
+
+# help read

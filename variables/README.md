@@ -43,6 +43,11 @@ echo "$userGreeting"
 
 ```shell script
 man read
+man builtins
+
+help read # In Bash
+run-help read # In ZSH
+
 tldr read
 ```
 
