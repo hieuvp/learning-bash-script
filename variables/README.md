@@ -42,15 +42,24 @@ echo "$userGreeting"
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 ```shell script
+# A man page (short for manual page)
 man read
+
+# Simplified and community-driven man pages
 tldr read
 ```
 
 ```shell script
+# Bash Builtins
 man builtins
 
-help read # In Bash
-run-help read # In ZSH
+# Help is a bash built-in
+# providing help for bash commands only
+help read # For Bash
+$ bash
+bash-5.0$ help read
+
+run-help read # For ZSH
 ```
 
 ```shell script

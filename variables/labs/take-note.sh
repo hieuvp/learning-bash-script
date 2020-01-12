@@ -8,3 +8,7 @@ read -r note
 echo "$note"
 
 # help read
+
+# echo $date: $note >> ~/$topicnotes.txt
+# echo $date: $note >> ~/"${topic}"notes.txt
+# Why {} ?
