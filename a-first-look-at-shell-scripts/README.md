@@ -6,8 +6,8 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 - [Creating A Shell Script](#creating-a-shell-script)
-- [--------------------------](#--------------------------)
 - [Demo: A Note-Taking Script](#demo-a-note-taking-script)
+- [--------------------------](#--------------------------)
 - [Calling The Script](#calling-the-script)
 - [The Shebang](#the-shebang)
 - [Naming Your Script](#naming-your-script)
@@ -31,8 +31,6 @@ chmod u-x filename
 chmod a-x filename
 ```
 
-## --------------------------
-
 ## Demo: A Note-Taking Script
 
 <!-- AUTO-GENERATED-CONTENT:START (CODE:src=labs/take-note.sh) -->
@@ -55,6 +53,8 @@ chmod a-x filename
 ```
 
 <!-- AUTO-GENERATED-CONTENT:END -->
+
+## --------------------------
 
 ## Calling The Script
 
