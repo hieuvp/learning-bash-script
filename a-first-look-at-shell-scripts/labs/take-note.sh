@@ -14,8 +14,8 @@ mkdir -p $directory
 
 # ">" vs ">>"?
 
-#echo $(date): $* >> /tmp/learning-bash-script/notes.txt
-#echo Note saved: $*
+# echo $(date): $* >> /tmp/learning-bash-script/notes.txt
+# echo Note saved: $*
 
 echo "$1" >> $file
 

@@ -53,8 +53,8 @@ mkdir -p $directory
 
 # ">" vs ">>"?
 
-#echo $(date): $* >> /tmp/learning-bash-script/notes.txt
-#echo Note saved: $*
+# echo $(date): $* >> /tmp/learning-bash-script/notes.txt
+# echo Note saved: $*
 
 echo "$1" >> $file
 
@@ -62,6 +62,15 @@ cat $file
 ```
 
 <!-- AUTO-GENERATED-CONTENT:END -->
+
+```shell script
+$ labs/take-note.sh Hello
+Hello
+
+$ labs/take-note.sh Harrison
+Hello
+Harrison
+```
 
 ## --------------------------
 
