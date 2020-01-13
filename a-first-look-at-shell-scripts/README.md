@@ -81,3 +81,5 @@ type ls
 ```
 
 ## Summary
+
+Add `man` and `tldr` to here
