@@ -39,6 +39,8 @@ chmod a-x filename
 ```sh
 #!/usr/bin/env bash
 
+mkdir -p "/tmp/learning-bash-script"
+
 # $1?
 # $@?
 # $*: hold all arguments?
@@ -48,8 +50,10 @@ chmod a-x filename
 
 # > vs >>
 
-#echo $(date): $* >> ~/notes.txt
+#echo $(date): $* >> /tmp/learning-bash-script/notes.txt
 #echo Note saved: $*
+
+echo "$1" >> /tmp/learning-bash-script/notes.txt
 ```
 
 <!-- AUTO-GENERATED-CONTENT:END -->
