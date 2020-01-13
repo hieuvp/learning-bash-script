@@ -21,3 +21,7 @@ git-add: fmt lint
 	@printf "\n"
 	git add .
 	@printf "\n"
+
+.PHONY: clean
+clean:
+	rm -rf /tmp/learning-bash-script
