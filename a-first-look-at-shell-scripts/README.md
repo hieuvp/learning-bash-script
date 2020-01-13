@@ -13,7 +13,6 @@
 - [Naming Your Script](#naming-your-script)
 - [Demo: The type Command](#demo-the-type-command)
 - [Summary](#summary)
-- [References](#references)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -25,12 +24,16 @@ chmod u+x filename
 ```
 
 ```shell script
+# To make it executable for everyone
 chmod a+x filename
+
 chmod u-x filename
 chmod a-x filename
 ```
 
-shebang: pronounce
+## --------------------------
+
+## Demo: A Note-Taking Script
 
 <!-- AUTO-GENERATED-CONTENT:START (CODE:src=labs/take-note.sh) -->
 <!-- The below code snippet is automatically added from labs/take-note.sh -->
@@ -53,13 +56,11 @@ shebang: pronounce
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
-## --------------------------
-
-## Demo: A Note-Taking Script
-
 ## Calling The Script
 
 ## The Shebang
+
+shebang: pronounce
 
 ```shell script
 #!/usr/bin/env bash
@@ -80,5 +81,3 @@ type ls
 ```
 
 ## Summary
-
-## References
