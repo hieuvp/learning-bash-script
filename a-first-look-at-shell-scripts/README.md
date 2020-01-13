@@ -39,7 +39,10 @@ chmod a-x filename
 ```sh
 #!/usr/bin/env bash
 
-mkdir -p "/tmp/learning-bash-script"
+declare -r directory="/tmp/learning-bash-script"
+declare -r file="$directory/notes.txt"
+
+mkdir -p $directory
 
 # $1?
 # $@?
@@ -48,12 +51,14 @@ mkdir -p "/tmp/learning-bash-script"
 # Command substitution
 # $(date)
 
-# > vs >>
+# ">" vs ">>"?
 
 #echo $(date): $* >> /tmp/learning-bash-script/notes.txt
 #echo Note saved: $*
 
-echo "$1" >> /tmp/learning-bash-script/notes.txt
+echo "$1" >> $file
+
+cat $file
 ```
 
 <!-- AUTO-GENERATED-CONTENT:END -->
