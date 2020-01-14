@@ -91,6 +91,23 @@ Good habit
 
 ## Using Variables: Good Habits
 
+Environment variables or shell variables that are introduced by the operating system,
+shell startup scripts,
+or by the shell itself etc.
+are usually all in CAPITALS.
+
+To prevent your own variables from conflicting with these variables,
+it is a good practice to use lower_case variable names.
+Considering camelCase
+
+<https://unix.stackexchange.com/questions/42847/are-there-naming-conventions-for-variables-in-shell-scripts>
+
+<https://google.github.io/styleguide/shell.xml>
+--> Should bookmarked?
+
+<https://github.com/progrium/bashstyle>
+--> Check style guild here
+
 ## Reading Input
 
 ## Debugging your Script
