@@ -98,6 +98,7 @@ Harrison
 - First line of file
 - Start with `#!`
 - Specify which interpreter to run the code
+- Specify options for interpreter
 
 <!-- AUTO-GENERATED-CONTENT:START (CODE:src=labs/shebang.sh) -->
 <!-- The below code snippet is automatically added from labs/shebang.sh -->
@@ -119,6 +120,14 @@ labs/shebang.sh
 
 ```sh
 #!/usr/bin/env bash
+
+# Other systems than Linux and Mac OS
+# May have bash in a different location
+# This will find bash on the user's PATH
+
+# Downside
+# Cannot give options
+# Result depends on the user's configuration
 
 echo "Version: $BASH_VERSION"
 

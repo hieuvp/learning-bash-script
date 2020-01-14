@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
 
+# Other systems than Linux and Mac OS
+# May have bash in a different location
+# This will find bash on the user's PATH
+
+# Downside
+# Cannot give options
+# Result depends on the user's configuration
+
 echo "Version: $BASH_VERSION"
 
 #!/usr/bin/env searches PATH for bash,
