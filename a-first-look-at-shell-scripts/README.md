@@ -12,7 +12,6 @@
 - [The Shebang](#the-shebang)
 - [Naming Your Script](#naming-your-script)
 - [Demo: The type Command](#demo-the-type-command)
-- [Summary](#summary)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -155,7 +154,15 @@ Comparison
 ## Demo: The type Command
 
 ```shell script
-type ls
+$ type test
+test is a shell builtin
 ```
 
-## Summary
+```shell script
+type cp
+```
+
+```shell script
+where
+which
+```
