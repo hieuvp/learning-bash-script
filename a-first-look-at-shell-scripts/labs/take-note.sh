@@ -18,5 +18,6 @@ mkdir -p $directory
 # echo Note saved: $*
 
 echo "$1" >> $file
+echo "Note saved"
 
 cat $file
