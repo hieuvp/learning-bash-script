@@ -93,7 +93,7 @@ Harrison
 
 ## The Shebang
 
-shebang: pronounce
+> shebang `/ʃɪˈbæŋ/`.
 
 <!-- AUTO-GENERATED-CONTENT:START (CODE:src=labs/shebang.sh) -->
 <!-- The below code snippet is automatically added from labs/shebang.sh -->
