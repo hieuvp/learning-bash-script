@@ -95,6 +95,10 @@ Harrison
 
 > shebang `/ʃɪˈbæŋ/`.
 
+- First line of file
+- Start with `#!`
+- Specify which interpreter to run the code
+
 <!-- AUTO-GENERATED-CONTENT:START (CODE:src=labs/shebang.sh) -->
 <!-- The below code snippet is automatically added from labs/shebang.sh -->
 
