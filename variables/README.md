@@ -5,7 +5,6 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-- [Introduction](#introduction)
 - [Demo: Variables](#demo-variables)
 - [Variable Basics](#variable-basics)
 - [Using Variables in A Script](#using-variables-in-a-script)
@@ -24,8 +23,6 @@
 Create another PR for this?
 <https://www.assertnotmagic.com/2018/06/20/bash-brackets-quick-reference/>
 <https://linuxconfig.org/bash-scripting-parenthesis-explained>
-
-## Introduction
 
 ## Demo: Variables
 
