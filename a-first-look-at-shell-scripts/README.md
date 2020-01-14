@@ -19,8 +19,22 @@
 ## Creating A Shell Script
 
 ```shell script
-chmod u+x filename
+man chmod
+```
+
+```shell script
+tldr chmod
+```
+
+```shell script
+# Give the [u]ser who owns a file the right to execute it:
+$ chmod u+x file
 # --> should add to fmt-shell.sh?
+```
+
+```shell script
+# Give [a]ll users rights to read and execute:
+chmod a+rx file
 ```
 
 ```shell script
@@ -99,5 +113,3 @@ type ls
 ```
 
 ## Summary
-
-Add `man` and `tldr` to here
