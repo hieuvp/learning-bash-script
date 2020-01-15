@@ -20,10 +20,10 @@
 ## Creating A Shell Script
 
 ```shell script
+# The system reference manuals
 man chmod
-```
 
-```shell script
+# Simplified and community-driven man pages
 tldr chmod
 ```
 
