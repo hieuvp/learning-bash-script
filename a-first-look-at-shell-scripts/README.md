@@ -13,6 +13,7 @@
 - [The Shebang](#the-shebang)
 - [Naming Your Script](#naming-your-script)
 - [Demo: The type Command](#demo-the-type-command)
+- [References](#references)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -59,6 +60,16 @@ chmod a-x filename
 |   `$0`    | Expands to the name of the shell or shell script.                                                                                                                                                                                                                                                                                                                                                                                          |
 |   `$_`    | The underscore variable is set at shell startup and contains the absolute file name of the shell or script being executed as passed in the argument list. Subsequently, it expands to the last argument to the previous command, after expansion. It is also set to the full pathname of each command executed and placed in the environment exported to that command. When checking mail, this parameter holds the name of the mail file. |
 
+$1?
+$@?
+\$\*: hold all arguments?
+
+<https://coderwall.com/p/85jnpq/bash-built-in-variables>
+<https://unix.stackexchange.com/questions/41571/what-is-the-difference-between-and>
+<https://eklitzke.org/bash-$%2A-and-$@>
+<https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Special-Parameters>
+<https://unix.stackexchange.com/questions/129072/whats-the-difference-between-and/129077>
+
 ## Demo: A Note-Taking Script
 
 <!-- AUTO-GENERATED-CONTENT:START (CODE:src=labs/take-note.sh) -->
@@ -71,18 +82,6 @@ declare -r directory="/tmp/learning-bash-script/a-first-look-at-shell-scripts"
 declare -r file="$directory/notes.txt"
 
 mkdir -p $directory
-
-# $1?
-# $@?
-# $*: hold all arguments?
-# https://coderwall.com/p/85jnpq/bash-built-in-variables
-# https://unix.stackexchange.com/questions/41571/what-is-the-difference-between-and
-# https://eklitzke.org/bash-$%2A-and-$@
-# https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Special-Parameters
-# https://unix.stackexchange.com/questions/129072/whats-the-difference-between-and/129077
-
-# http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_02.html
-# --> 3.2.5. Special parameters
 
 # Command substitution
 # $(date)
@@ -189,3 +188,7 @@ type cp
 where
 which
 ```
+
+## References
+
+- [Special Parameters](http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_02.html)
