@@ -3,7 +3,10 @@
 set -eoux pipefail
 
 # Ask user for input
-read -r note
+# read -r note
+
+# -p prompt
+read -r -p "Your note: " note
 
 echo "$note"
 

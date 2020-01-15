@@ -92,9 +92,7 @@ Good habit
 ## Using Variables: Good Habits
 
 Environment variables or shell variables that are introduced by the operating system,
-shell startup scripts,
-or by the shell itself etc.
-are usually all in CAPITALS.
+shell startup scripts, or by the shell itself etc. are usually all in CAPITALS.
 
 To prevent your own variables from conflicting with these variables,
 it is a good practice to use lower_case variable names.
@@ -123,3 +121,5 @@ especially when they are shared across multiple scripts or processes.
 ## Summary
 
 ## References
+
+- [Shell Style Guide](https://google.github.io/styleguide/shell.xml)
