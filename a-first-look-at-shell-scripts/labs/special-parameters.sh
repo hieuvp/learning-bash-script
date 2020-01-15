@@ -1,3 +1,8 @@
 #!/usr/bin/env bash
 
-set -x pipefail
+printf "\$2 = %s\n" "$2"
+
+echo "\$0 = $0"
+
+echo "$1"
+echo "$2"

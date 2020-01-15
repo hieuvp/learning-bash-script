@@ -20,7 +20,7 @@
 ## Creating A Shell Script
 
 ```shell script
-# The system reference manuals
+# The manual page
 man chmod
 
 # Simplified and community-driven man pages
@@ -66,13 +66,18 @@ chmod a-x filename
 ```sh
 #!/usr/bin/env bash
 
-set -x pipefail
+printf "\$2 = %s\n" "$2"
+
+echo "\$0 = $0"
+
+echo "$1"
+echo "$2"
 ```
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 ```shell script
-
+labs/special-parameters.sh Good Morning Harrison
 ```
 
 $1?
