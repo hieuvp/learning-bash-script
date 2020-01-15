@@ -100,13 +100,21 @@ To prevent your own variables from conflicting with these variables,
 it is a good practice to use lower_case variable names.
 Considering camelCase
 
-<https://unix.stackexchange.com/questions/42847/are-there-naming-conventions-for-variables-in-shell-scripts>
+More here:
 
-<https://google.github.io/styleguide/shell.xml>
---> Should bookmarked?
+- <https://stackoverflow.com/questions/673055/correct-bash-and-shell-script-variable-capitalization>
+- <https://google.github.io/styleguide/shell.xml>
 
-<https://github.com/progrium/bashstyle>
---> Check style guild here
+Keeping to this convention,
+you can rest assured that you don't need to know every environment variable
+used by UNIX tools or shells in order to avoid overwriting them.
+If it's your variable, lowercase it. If you export it, uppercase it.
+
+Use all caps and underscores for exported variables and constants,
+especially when they are shared across multiple scripts or processes.
+
+- Exported variables with a common prefix: JOB_HOME JOB_LOG JOB_TEMP JOB_RUN_CONTROL
+- Constants: LOG_DEBUG LOG_INFO LOG_ERROR STATUS_OK STATUS_ERROR STATUS_WARNING
 
 ## Reading Input
 
