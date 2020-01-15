@@ -60,6 +60,21 @@ chmod a-x filename
 |   `$0`    | Expands to the name of the shell or shell script.                                                                                                                                                                                                                                                                                                                                                                                          |
 |   `$_`    | The underscore variable is set at shell startup and contains the absolute file name of the shell or script being executed as passed in the argument list. Subsequently, it expands to the last argument to the previous command, after expansion. It is also set to the full pathname of each command executed and placed in the environment exported to that command. When checking mail, this parameter holds the name of the mail file. |
 
+<!-- AUTO-GENERATED-CONTENT:START (CODE:src=labs/special-parameters.sh) -->
+<!-- The below code snippet is automatically added from labs/special-parameters.sh -->
+
+```sh
+#!/usr/bin/env bash
+
+set -x pipefail
+```
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
+```shell script
+
+```
+
 $1?
 $@?
 \$\*: hold all arguments?
