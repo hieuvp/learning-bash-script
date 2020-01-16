@@ -6,8 +6,10 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 - [Creating A Shell Script](#creating-a-shell-script)
-- [IFS](#ifs)
-- [Special Parameters](#special-parameters)
+- [Internal Variables](#internal-variables)
+  - [IFS](#ifs)
+  - [Positional Parameters](#positional-parameters)
+  - [Special Parameters](#special-parameters)
 - [Demo: A Note-Taking Script](#demo-a-note-taking-script)
 - [--------------------------](#--------------------------)
 - [Calling The Script](#calling-the-script)
@@ -47,13 +49,21 @@ chmod u-x filename
 chmod a-x filename
 ```
 
-## IFS
+## Internal Variables
+
+- <https://riptutorial.com/bash/topic/4797/internal-variables>
+
+### IFS
+
+> Internal Field Separator.
 
 - <https://riptutorial.com/bash/example/16872/-ifs>
 - <https://riptutorial.com/bash/example/19453/what--when-and-why->
 - <https://bash.cyberciti.biz/guide/$IFS>
 
-## Special Parameters
+### Positional Parameters
+
+### Special Parameters
 
 More clear docs
 
