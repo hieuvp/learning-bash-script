@@ -60,6 +60,7 @@ chmod a-x filename
 - <https://riptutorial.com/bash/example/16872/-ifs>
 - <https://riptutorial.com/bash/example/19453/what--when-and-why->
 - <https://bash.cyberciti.biz/guide/$IFS>
+- <https://bash.cyberciti.biz/guide/$IFS>
 
 ### Positional Parameters
 
