@@ -6,6 +6,7 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 - [Creating A Shell Script](#creating-a-shell-script)
+- [IFS](#ifs)
 - [Special Parameters](#special-parameters)
 - [Demo: A Note-Taking Script](#demo-a-note-taking-script)
 - [--------------------------](#--------------------------)
@@ -46,7 +47,17 @@ chmod u-x filename
 chmod a-x filename
 ```
 
+## IFS
+
+- <https://riptutorial.com/bash/example/16872/-ifs>
+- <https://riptutorial.com/bash/example/19453/what--when-and-why->
+- <https://bash.cyberciti.biz/guide/$IFS>
+
 ## Special Parameters
+
+More clear docs
+
+- <https://riptutorial.com/bash/example/16891/-->
 
 | Character | Definition                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | :-------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -64,6 +75,8 @@ chmod a-x filename
 
 printf "\n"
 
+#### https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html
+#### Positional Parameters
 # Expands to the name of the shell or shell script
 printf "\$0 = %s\n" "$0"
 printf "\n"

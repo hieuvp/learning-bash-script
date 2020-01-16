@@ -2,6 +2,8 @@
 
 printf "\n"
 
+#### https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html
+#### Positional Parameters
 # Expands to the name of the shell or shell script
 printf "\$0 = %s\n" "$0"
 printf "\n"
