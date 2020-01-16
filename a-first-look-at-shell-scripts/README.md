@@ -50,14 +50,10 @@ chmod a-x filename
 
 | Character | Definition                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | :-------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|   `$*`    | Expands to the positional parameters, starting from one. When the expansion occurs within double quotes, it expands to a single word with the value of each parameter separated by the first character of the IFS special variable.                                                                                                                                                                                                        |
-|   `$@`    | Expands to the positional parameters, starting from one. When the expansion occurs within double quotes, each parameter expands to a separate word.                                                                                                                                                                                                                                                                                        |
-|   `$#`    | Expands to the number of positional parameters in decimal.                                                                                                                                                                                                                                                                                                                                                                                 |
 |   `$?`    | Expands to the exit status of the most recently executed foreground pipeline.                                                                                                                                                                                                                                                                                                                                                              |
 |   `$-`    | A hyphen expands to the current option flags as specified upon invocation, by the set built-in command, or those set by the shell itself (such as the -i).                                                                                                                                                                                                                                                                                 |
 |   `$$`    | Expands to the process ID of the shell.                                                                                                                                                                                                                                                                                                                                                                                                    |
 |   `$!`    | Expands to the process ID of the most recently executed background (asynchronous) command.                                                                                                                                                                                                                                                                                                                                                 |
-|   `$0`    | Expands to the name of the shell or shell script.                                                                                                                                                                                                                                                                                                                                                                                          |
 |   `$_`    | The underscore variable is set at shell startup and contains the absolute file name of the shell or script being executed as passed in the argument list. Subsequently, it expands to the last argument to the previous command, after expansion. It is also set to the full pathname of each command executed and placed in the environment exported to that command. When checking mail, this parameter holds the name of the mail file. |
 
 <!-- AUTO-GENERATED-CONTENT:START (CODE:src=labs/special-parameters.sh) -->
@@ -66,12 +62,33 @@ chmod a-x filename
 ```sh
 #!/usr/bin/env bash
 
+printf "\n"
+
+# Expands to the name of the shell or shell script
+printf "\$0 = %s\n" "$0"
+printf "\n"
+
+printf "\$1 = %s\n" "$1"
 printf "\$2 = %s\n" "$2"
+printf "\$3 = %s\n" "$3"
+printf "\n"
 
-echo "\$0 = $0"
+# Expands to the positional parameters, starting from one
+# When the expansion occurs within double quotes,
+# each parameter expands to a separate word.
+printf "\$@ = %s\n" "$@"
+printf "\n"
 
-echo "$1"
-echo "$2"
+# Expands to the positional parameters, starting from one
+# When the expansion occurs within double quotes,
+# it expands to a single word with the value of each parameter
+# separated by the first character of the IFS special variable
+printf "\$* = %s\n" "$*"
+printf "\n"
+
+# Expands to the number of positional parameters in decimal
+printf "\$# = %s\n" "$#"
+printf "\n"
 ```
 
 <!-- AUTO-GENERATED-CONTENT:END -->
@@ -80,7 +97,6 @@ echo "$2"
 labs/special-parameters.sh Good Morning Harrison
 ```
 
-$1?
 $@?
 \$\*: hold all arguments?
 
