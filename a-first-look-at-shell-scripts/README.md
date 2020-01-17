@@ -15,7 +15,6 @@
 - [The Shebang](#the-shebang)
 - [Naming Your Script](#naming-your-script)
 - [Demo: The `type` Command](#demo-the-type-command)
-- [--------------------------](#--------------------------)
 - [References](#references)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -260,15 +259,19 @@ test is a shell builtin
 ```
 
 ```shell script
-type cp
+$ type cp
+cp is /usr/local/opt/coreutils/libexec/gnubin/cp
+```
+
+```shell script
+$ type foo
+foo not found
 ```
 
 ```shell script
 where
 which
 ```
-
-## --------------------------
 
 ## References
 
