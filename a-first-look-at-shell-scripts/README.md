@@ -14,8 +14,8 @@
 - [Calling The Script](#calling-the-script)
 - [The Shebang](#the-shebang)
 - [Naming Your Script](#naming-your-script)
-- [--------------------------](#--------------------------)
 - [Demo: The `type` Command](#demo-the-type-command)
+- [--------------------------](#--------------------------)
 - [References](#references)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -245,7 +245,12 @@ labs/shebang-with-env.sh
 
 ## Naming Your Script
 
-## --------------------------
+- Don't name your script `test`, `if` or `ls`
+
+  - Conflicts with existing commands
+
+- Does a command with the same name exist
+  - Use commands in below section (e.g. `type`)
 
 ## Demo: The `type` Command
 
@@ -262,6 +267,8 @@ type cp
 where
 which
 ```
+
+## --------------------------
 
 ## References
 
