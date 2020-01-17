@@ -17,14 +17,6 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-<https://www.linux.com/tutorials/all-about-curly-braces-bash/>
-`{Curly Braces}`
-`parenthesis ()`
-
-Create another PR for this?
-<https://www.assertnotmagic.com/2018/06/20/bash-brackets-quick-reference/>
-<https://linuxconfig.org/bash-scripting-parenthesis-explained>
-
 ## Demo: Variables
 
 <!-- AUTO-GENERATED-CONTENT:START (CODE:src=labs/demo.sh) -->
@@ -120,6 +112,9 @@ especially when they are shared across multiple scripts or processes.
 ## Reading Input
 
 ## Debugging your Script
+
+- `-x`:
+- set `-x`, set `+x`
 
 ## Summary
 
