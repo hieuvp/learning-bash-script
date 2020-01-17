@@ -12,8 +12,8 @@
   - [Special Parameters](#special-parameters)
 - [Demo: A Note-Taking Script](#demo-a-note-taking-script)
 - [Calling The Script](#calling-the-script)
-- [--------------------------](#--------------------------)
 - [The Shebang](#the-shebang)
+- [--------------------------](#--------------------------)
 - [Naming Your Script](#naming-your-script)
 - [Demo: The type Command](#demo-the-type-command)
 - [References](#references)
@@ -169,15 +169,16 @@ Hello
 Harrison
 ```
 
+## Calling The Script
+
 ```shell script
 # What does the "PATH" mean here ?
 # Can call this script globally, without including the directory
-PATH=$PATH:~/bin
+# Add to your path
+PATH="$PATH:~/bin"
 ```
 
-## Calling The Script
-
-## --------------------------
+- `bin/` conventional name
 
 ## The Shebang
 
@@ -237,6 +238,8 @@ labs/shebang-with-env.sh
 ```
 
 Comparison
+
+## --------------------------
 
 ## Naming Your Script
 
