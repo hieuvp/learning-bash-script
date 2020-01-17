@@ -11,8 +11,8 @@
   - [Positional Parameters](#positional-parameters)
   - [Special Parameters](#special-parameters)
 - [Demo: A Note-Taking Script](#demo-a-note-taking-script)
-- [--------------------------](#--------------------------)
 - [Calling The Script](#calling-the-script)
+- [--------------------------](#--------------------------)
 - [The Shebang](#the-shebang)
 - [Naming Your Script](#naming-your-script)
 - [Demo: The type Command](#demo-the-type-command)
@@ -169,9 +169,13 @@ Hello
 Harrison
 ```
 
-## --------------------------
+```shell script
+PATH=$PATH:~/bin
+```
 
 ## Calling The Script
+
+## --------------------------
 
 ## The Shebang
 
