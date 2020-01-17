@@ -9,6 +9,7 @@ mkdir -p $directory
 # $(date)
 
 # ">" vs ">>"?
+# Called "Redirection"?
 
 # echo $(date): $* >> /tmp/learning-bash-script/notes.txt
 # echo Note saved: $*
