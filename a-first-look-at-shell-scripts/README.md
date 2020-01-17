@@ -21,6 +21,11 @@
 
 ## Creating A Shell Script
 
+- A file containing commands
+- Executed by your shell
+- Don't forget to set permissions
+- Comments start with `#`
+
 ```shell script
 # The manual page
 man chmod
@@ -178,6 +183,9 @@ PATH="$PATH:~/bin"
 ```
 
 - `bin/` conventional name
+
+- Add script to your PATH
+- Or call it with full pathname
 
 ## The Shebang
 
