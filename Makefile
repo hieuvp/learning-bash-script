@@ -1,5 +1,7 @@
 include .env
 
+NAME = learning-bash-script
+
 .PHONY: fmt
 fmt:
 	@printf "\n"
@@ -24,4 +26,4 @@ git-add: fmt lint
 
 .PHONY: clean
 clean:
-	rm -rf /tmp/learning-bash-script
+	rm -rf /tmp/$(NAME)
