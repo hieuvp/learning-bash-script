@@ -170,6 +170,8 @@ Harrison
 ```
 
 ```shell script
+# What does the "PATH" mean here ?
+# Can call this script globally, without including the directory
 PATH=$PATH:~/bin
 ```
 
