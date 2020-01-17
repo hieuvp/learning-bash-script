@@ -13,9 +13,9 @@
 - [Demo: A Note-Taking Script](#demo-a-note-taking-script)
 - [Calling The Script](#calling-the-script)
 - [The Shebang](#the-shebang)
-- [--------------------------](#--------------------------)
 - [Naming Your Script](#naming-your-script)
-- [Demo: The type Command](#demo-the-type-command)
+- [--------------------------](#--------------------------)
+- [Demo: The `type` Command](#demo-the-type-command)
 - [References](#references)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -184,6 +184,12 @@ PATH="$PATH:~/bin"
 
 > shebang `/ʃɪˈbæŋ/`.
 
+Or Hash bang?
+hash => `#`
+bang => `!`
+
+Shebang line:
+
 - First line of file
 - Start with `#!`
 - Specify which interpreter to run the code
@@ -214,7 +220,7 @@ labs/shebang.sh
 # May have bash in a different location
 # This will find bash on the user's PATH
 
-# Downside
+# Downside (Drawback)
 # Cannot give options
 # Result depends on the user's configuration
 
@@ -237,13 +243,11 @@ echo "Version: $BASH_VERSION"
 labs/shebang-with-env.sh
 ```
 
-Comparison
+## Naming Your Script
 
 ## --------------------------
 
-## Naming Your Script
-
-## Demo: The type Command
+## Demo: The `type` Command
 
 ```shell script
 $ type test

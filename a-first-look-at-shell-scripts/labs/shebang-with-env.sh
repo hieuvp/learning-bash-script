@@ -4,7 +4,7 @@
 # May have bash in a different location
 # This will find bash on the user's PATH
 
-# Downside
+# Downside (Drawback)
 # Cannot give options
 # Result depends on the user's configuration
 
