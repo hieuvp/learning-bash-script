@@ -7,8 +7,8 @@
 
 - [Demo: Variables](#demo-variables)
 - [Variable Basics](#variable-basics)
-- [--------------------------------](#--------------------------------)
 - [Using Variables in A Script](#using-variables-in-a-script)
+- [--------------------------------](#--------------------------------)
 - [Using Variables: Good Habits](#using-variables-good-habits)
 - [Reading Input](#reading-input)
 - [Debugging your Script](#debugging-your-script)
@@ -61,9 +61,17 @@ Good morning,
 
 ## Variable Basics
 
-variables are case-sensitive
+Bash variables have no type
 
-Uppercase variables
+- Basically just store a string
+
+Names:
+
+- Only letters, numbers, and underscore are allowed
+- First character should be a letter or an underscore
+- Variable names are case-sensitive
+
+Uppercase variables:
 
 - Bash has many pre-defined variables
 - PATH, HOME, SECONDS, IFS, etc.
@@ -71,11 +79,11 @@ Uppercase variables
 
 Good habit
 
-- Use lower-case name for your variable
-
-## --------------------------------
+- Use lower-case names for your variables
 
 ## Using Variables in A Script
+
+## --------------------------------
 
 ## Using Variables: Good Habits
 
