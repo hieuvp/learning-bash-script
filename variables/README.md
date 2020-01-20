@@ -83,6 +83,31 @@ Good habit
 
 ## Using Variables in A Script
 
+<!-- AUTO-GENERATED-CONTENT:START (CODE:src=labs/take-note.sh) -->
+<!-- The below code snippet is automatically added from labs/take-note.sh -->
+
+```sh
+#!/usr/bin/env bash
+
+set -eoux pipefail
+
+# Ask user for input
+# read -r note
+
+# -p prompt
+read -r -p "Your note: " note
+
+echo "$note"
+
+# help read
+
+# echo $date: $note >> ~/$topicnotes.txt
+# echo $date: $note >> ~/"${topic}"notes.txt
+# Why {} ?
+```
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
 ## --------------------------------
 
 ## Using Variables: Good Habits
