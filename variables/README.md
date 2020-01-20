@@ -41,14 +41,6 @@ echo "$user_greeting"
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 ```shell script
-# A man page (short for manual page)
-man read
-
-# Simplified and community-driven man pages
-tldr read
-```
-
-```shell script
 # Bash Builtins
 man builtins
 
