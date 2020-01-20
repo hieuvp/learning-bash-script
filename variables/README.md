@@ -41,6 +41,8 @@ echo "$user_greeting"
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 ```shell script
+man read
+
 # Bash Builtins
 man builtins
 
@@ -104,6 +106,10 @@ echo "$note"
 # echo $date: $note >> ~/$topicnotes.txt
 # echo $date: $note >> ~/"${topic}"notes.txt
 # Why {} ?
+
+echo Note saved: "$note"
+
+cat notes.txt
 ```
 
 <!-- AUTO-GENERATED-CONTENT:END -->

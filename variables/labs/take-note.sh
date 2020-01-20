@@ -15,3 +15,7 @@ echo "$note"
 # echo $date: $note >> ~/$topicnotes.txt
 # echo $date: $note >> ~/"${topic}"notes.txt
 # Why {} ?
+
+echo Note saved: "$note"
+
+cat notes.txt
