@@ -93,6 +93,9 @@ Good habit
 
 set -eoux pipefail
 
+# Get the date
+# date=$(date)
+
 # Ask user for input
 # read -r note
 
@@ -110,6 +113,26 @@ echo "$note"
 echo Note saved: "$note"
 
 cat notes.txt
+
+##!/bin/bash
+#
+## Simple note-taking script
+## Author: reindert
+#
+## get the date
+#date=$(date)
+#
+## get the topic
+#topic="$1"
+#
+## filename to write to
+#filename="${HOME}/${topic}notes.txt"
+#
+## Ask user for input
+#read -p "Your note: " note
+#
+#echo "$date: $note" >> "$filename"
+#echo "Note '$note' saved to $filename"
 ```
 
 <!-- AUTO-GENERATED-CONTENT:END -->
