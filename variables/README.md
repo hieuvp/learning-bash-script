@@ -6,8 +6,8 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 - [Demo: Variables](#demo-variables)
-- [--------------------------------](#--------------------------------)
 - [Variable Basics](#variable-basics)
+- [--------------------------------](#--------------------------------)
 - [Using Variables in A Script](#using-variables-in-a-script)
 - [Using Variables: Good Habits](#using-variables-good-habits)
 - [Reading Input](#reading-input)
@@ -59,8 +59,6 @@ Good morning, hieu.van
 Good morning,
 ```
 
-## --------------------------------
-
 ## Variable Basics
 
 variables are case-sensitive
@@ -74,6 +72,8 @@ Uppercase variables
 Good habit
 
 - Use lower-case name for your variable
+
+## --------------------------------
 
 ## Using Variables in A Script
 
