@@ -137,9 +137,17 @@ cat notes.txt
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
+`quotes` vs `double quotes`. What the difference?
+
 ## --------------------------------
 
 ## Using Variables: Good Habits
+
+Surround your variables with quotes
+
+- Use `"$x"` instead of `$x`
+- Prevent surprises when it contains spaces
+- Use double quotes: keep meaning of dollar sign intact
 
 Environment variables or shell variables that are introduced by the operating system,
 shell startup scripts, or by the shell itself etc. are usually all in CAPITALS.
