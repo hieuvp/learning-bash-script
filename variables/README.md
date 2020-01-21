@@ -149,6 +149,14 @@ Surround your variables with quotes
 - Prevent surprises when it contains spaces
 - Use double quotes: keep meaning of dollar sign intact
 
+Braces
+
+- Where does your variable name end?
+- echo `"${foo}bar"`
+- prints value of var `"foo"` followed by string `"bar"`
+- `echo "$foobar"` prints value of `"foobar"`
+- Using braces a lot is a Good Habit
+
 Environment variables or shell variables that are introduced by the operating system,
 shell startup scripts, or by the shell itself etc. are usually all in CAPITALS.
 
