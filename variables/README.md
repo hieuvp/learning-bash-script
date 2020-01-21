@@ -195,8 +195,9 @@ read
 
 ## Debugging your Script
 
-- `-x`:
+- `#!/bin/bash -x`:
 - set `-x`, set `+x`
+- `pipefail`
 
 ## Summary
 
