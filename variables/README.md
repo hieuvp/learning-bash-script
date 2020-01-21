@@ -157,6 +157,8 @@ Braces
 - `echo "$foobar"` prints value of `"foobar"`
 - Using braces a lot is a Good Habit
 
+Use `$HOME` instead of `~`
+
 Environment variables or shell variables that are introduced by the operating system,
 shell startup scripts, or by the shell itself etc. are usually all in CAPITALS.
 
@@ -181,6 +183,15 @@ especially when they are shared across multiple scripts or processes.
 - Constants: LOG_DEBUG LOG_INFO LOG_ERROR STATUS_OK STATUS_ERROR STATUS_WARNING
 
 ## Reading Input
+
+read
+
+- Reads a line of input into a variable
+- read var
+- Is a shell builtin
+- `"help read"`
+- `"man builtins"`
+- `read -p "Type your name:" name`
 
 ## Debugging your Script
 
