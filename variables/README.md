@@ -201,6 +201,30 @@ read
 
 ## Summary
 
+Variables
+
+- Assign value
+- Get value `($)`
+- No whitespace around `=`
+
+Variable names
+
+- Use lowercase names
+
+Using variables
+
+- Quotes
+- Braces
+
+Reading input
+
+- read
+
+Debugging
+
+- Use `-x` option in hashbang line
+- Or use `"set -x"` to enable and `"set +x"` to disable
+
 ## References
 
 - [Shell Style Guide](https://google.github.io/styleguide/shell.xml)
