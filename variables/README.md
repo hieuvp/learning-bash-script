@@ -102,13 +102,14 @@ set -eoux pipefail
 # -p prompt
 read -r -p "Your note: " note
 
-echo "$note"
+# echo "$note"
 
 # help read
 
 # echo $date: $note >> ~/$topicnotes.txt
 # echo $date: $note >> ~/"${topic}"notes.txt
-# Why {} ?
+# Reason for using "{}" ?
+# Another kind? (), ...?
 
 echo Note saved: "$note"
 
