@@ -13,8 +13,6 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-- <https://riptutorial.com/bash/topic/4797/internal-variables>
-
 ## IFS
 
 > Internal Field Separator.
@@ -98,3 +96,5 @@ $@?
 - <https://docstore.mik.ua/orelly/linux/lnut/ch08_04.htm>
 
 ## References
+
+- [Internal variables](https://riptutorial.com/bash/topic/4797/internal-variables)
