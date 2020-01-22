@@ -8,9 +8,9 @@
 - [Demo: Variables](#demo-variables)
 - [Variable Basics](#variable-basics)
 - [Using Variables in A Script](#using-variables-in-a-script)
-- [--------------------------------](#--------------------------------)
 - [Using Variables: Good Habits](#using-variables-good-habits)
 - [Reading Input](#reading-input)
+- [--------------------------------](#--------------------------------)
 - [Debugging your Script](#debugging-your-script)
 - [Summary](#summary)
 - [References](#references)
@@ -148,8 +148,6 @@ $ echo '$note'
 echo \'$note'\
 ```
 
-## --------------------------------
-
 ## Using Variables: Good Habits
 
 Surround your variables with quotes
@@ -158,15 +156,18 @@ Surround your variables with quotes
 - Prevent surprises when it contains spaces
 - Use double quotes: keep meaning of dollar sign intact
 
-Braces
+Braces `{}`
 
 - Where does your variable name end?
-- echo `"${foo}bar"`
+- `echo "${foo}bar"`
 - prints value of var `"foo"` followed by string `"bar"`
 - `echo "$foobar"` prints value of `"foobar"`
 - Using braces a lot is a Good Habit
 
 Use `$HOME` instead of `~`
+
+- Some context, like using double quotes, the `~` may not be expanded by bash
+  and give an unexpected result.
 
 Environment variables or shell variables that are introduced by the operating system,
 shell startup scripts, or by the shell itself etc. are usually all in CAPITALS.
@@ -201,6 +202,8 @@ read
 - `"help read"`
 - `"man builtins"`
 - `read -p "Type your name:" name`
+
+## --------------------------------
 
 ## Debugging your Script
 
