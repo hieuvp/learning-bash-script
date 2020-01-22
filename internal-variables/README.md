@@ -13,6 +13,8 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
+The List:
+
 1. `$!`
 1. `$#`
 1. `$$`
@@ -115,8 +117,8 @@ printf "\n"
 labs/special-parameters.sh Good Morning Harrison
 ```
 
-$@?
-\$\*: hold all arguments?
+- \$@?
+- \$\*: hold all arguments?
 
 - <https://coderwall.com/p/85jnpq/bash-built-in-variables>
 - <https://unix.stackexchange.com/questions/41571/what-is-the-difference-between-and>

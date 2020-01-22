@@ -174,7 +174,7 @@ labs/shebang-with-env.sh
 - Does a command with the same name exist
   - Use commands in below section (e.g. `type`)
 
-## Demo: The `type` Command
+## The `type` Command
 
 ```shell script
 $ type test
