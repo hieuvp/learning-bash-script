@@ -13,6 +13,40 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
+1. `$!`
+1. `$#`
+1. `$$`
+1. `$*`
+1. `$?`
+1. `$@`
+1. `$_`
+1. `$1 $2 $3 etc...`
+1. `$BASH_ENV`
+1. `$BASH_VERSINFO`
+1. `$BASH_VERSION`
+1. `$BASHPID`
+1. `$EDITOR`
+1. `$FUNCNAME`
+1. `$GROUPS`
+1. `$HISTSIZE`
+1. `$HOME`
+1. `$HOSTNAME`
+1. `$HOSTTYPE`
+1. `$IFS`
+1. `$LINENO`
+1. `$MACHTYPE`
+1. `$OLDPWD`
+1. `$OSTYPE`
+1. `$PATH`
+1. `$PPID`
+1. `$PWD`
+1. `$RANDOM`
+1. `$SECONDS`
+1. `$SHELLOPTS`
+1. `$SHLVL`
+1. `$UID`
+1. `Bash internal variables at a glance`
+
 ## IFS
 
 > Internal Field Separator.
