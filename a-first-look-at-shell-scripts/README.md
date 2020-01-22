@@ -10,7 +10,7 @@
 - [Calling The Script](#calling-the-script)
 - [The Shebang](#the-shebang)
 - [Naming Your Script](#naming-your-script)
-- [Demo: The `type` Command](#demo-the-type-command)
+- [The `type` Command](#the-type-command)
 - [References](#references)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
