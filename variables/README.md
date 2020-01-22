@@ -10,8 +10,8 @@
 - [Using Variables in A Script](#using-variables-in-a-script)
 - [Using Variables: Good Habits](#using-variables-good-habits)
 - [Reading Input](#reading-input)
-- [--------------------------------](#--------------------------------)
 - [Debugging your Script](#debugging-your-script)
+- [--------------------------------](#--------------------------------)
 - [Summary](#summary)
 - [References](#references)
 
@@ -197,19 +197,19 @@ especially when they are shared across multiple scripts or processes.
 read
 
 - Reads a line of input into a variable
-- read var
+- `read var`
 - Is a shell builtin
-- `"help read"`
-- `"man builtins"`
+- `help read`
+- `man builtins`
 - `read -p "Type your name:" name`
-
-## --------------------------------
 
 ## Debugging your Script
 
 - `#!/bin/bash -x`:
 - set `-x`, set `+x`
 - `pipefail`
+
+## --------------------------------
 
 ## Summary
 
