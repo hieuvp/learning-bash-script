@@ -207,7 +207,7 @@ read
 
 - `#!/bin/bash -x`:
 - set `-x`, set `+x`
-- `pipefail`
+- `set -x pipefail`
 
 ## --------------------------------
 
