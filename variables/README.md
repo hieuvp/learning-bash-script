@@ -138,7 +138,15 @@ cat notes.txt
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
-`quotes` vs `double quotes`. What the difference?
+- `quotes` vs `double quotes`. What the difference?
+  - single quotes escape every character between them.
+
+```shell script
+$ echo '$note'
+# $note
+
+echo \'$note'\
+```
 
 ## --------------------------------
 
