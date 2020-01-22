@@ -11,7 +11,6 @@
 - [Using Variables: Good Habits](#using-variables-good-habits)
 - [Reading Input](#reading-input)
 - [Debugging your Script](#debugging-your-script)
-- [--------------------------------](#--------------------------------)
 - [Summary](#summary)
 - [References](#references)
 
@@ -212,8 +211,6 @@ To debug several lines:
 
 - set `-x`
 - set `+x`
-
-## --------------------------------
 
 ## Summary
 
