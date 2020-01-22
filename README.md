@@ -14,8 +14,8 @@
 ## Bash
 
 1. [ ] [A First Look at Shell Scripts](a-first-look-at-shell-scripts/README.md)
-1. [Brackets](brackets/README.md)
 1. [Variables](variables/README.md)
+1. [Brackets](brackets/README.md)
 1. [ ] [If, Then, Else](if-then-else/README.md)
 1. [ ] [Input and Output](input-and-output/README.md)
 1. [ ] [Control Flow](control-flow/README.md)
