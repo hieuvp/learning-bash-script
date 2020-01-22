@@ -205,9 +205,13 @@ read
 
 ## Debugging your Script
 
-- `#!/bin/bash -x`:
-- set `-x`, set `+x`
+- `#!/bin/bash -x`
 - `set -x pipefail`
+
+To debug several lines:
+
+- set `-x`
+- set `+x`
 
 ## --------------------------------
 
