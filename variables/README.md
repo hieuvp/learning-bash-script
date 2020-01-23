@@ -193,17 +193,24 @@ especially when they are shared across multiple scripts or processes.
 
 ## Naming Conventions
 
-- Variable Names
-  Lower-case, with underscores to separate words
+- Variable Names: `lower_case_with_underscores`
 
-- Constants and Environment Variable Names
-  All caps, separated with underscores, declared at the top of the file.
+- Constants and Environment Variable Names: `ALL_CAPS_WITH_UNDERSCORES`
+  Declared at the top of the file.
 
-- Source Filenames
-  Lowercase, with underscores to separate words if desired.
+```shell script
+# Constant
+readonly PATH_TO_FILES='/some/path'
+
+# Both constant and environment
+declare -xr ORACLE_SID='PROD'
+```
+
+- Source Filenames: `lower_case_with_underscores`
+  e.g. `maketemplate` or `make_template` but NOT `make-template`.
 
 - Read-only Variables
-  Use readonly or declare -r to ensure they're read only.
+  Use `readonly` or `declare -r` to ensure they're read only.
 
 - Use Local Variables
   Declare function-specific variables with local.
