@@ -47,9 +47,10 @@
 
 ## References
 
+- [Bash Brackets Quick Reference](https://www.assertnotmagic.com/2018/06/20/bash-brackets-quick-reference)
+
 - <https://www.linux.com/tutorials/all-about-curly-braces-bash/>
   `{Curly Braces}`
   `parenthesis ()`
 
-- <https://www.assertnotmagic.com/2018/06/20/bash-brackets-quick-reference/>
 - <https://linuxconfig.org/bash-scripting-parenthesis-explained>
