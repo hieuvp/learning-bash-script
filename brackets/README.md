@@ -15,7 +15,7 @@
 - [`[[ Double Square Brackets ]]`](#-double-square-brackets-)
 - [`Function Parens/Braces() { ... }`](#function-parensbraces---)
 - [`{ Single Curly Braces }`](#-single-curly-braces-)
-- [`${Dollar Braces}`](#dollar-braces)
+- [`${ Dollar Braces }`](#-dollar-braces-)
 - [`<<Double Angle Heredocs`](#double-angle-heredocs)
 - [References](#references)
 
@@ -41,9 +41,11 @@
 
 ## `{ Single Curly Braces }`
 
-## `${Dollar Braces}`
+## `${ Dollar Braces }`
 
 ## `<<Double Angle Heredocs`
+
+What is a heredoc?
 
 ## References
 
