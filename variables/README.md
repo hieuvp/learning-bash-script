@@ -10,6 +10,10 @@
 - [Using Variables in A Script](#using-variables-in-a-script)
 - [Using Variables: Good Habits](#using-variables-good-habits)
 - [Naming Conventions](#naming-conventions)
+  - [Variable Names](#variable-names)
+  - [Constants and Environment Variable Names](#constants-and-environment-variable-names)
+  - [Source Filenames](#source-filenames)
+  - [Read-only Variables](#read-only-variables)
 - [Reading Input](#reading-input)
 - [Debugging your Script](#debugging-your-script)
 - [Summary](#summary)
@@ -171,10 +175,13 @@ Use `$HOME` instead of `~`
 
 ## Naming Conventions
 
-- Variable Names: `lower_case_with_underscores`
+### Variable Names
 
-- Constants and Environment Variable Names: `ALL_CAPS_WITH_UNDERSCORES`
-  Declared at the top of the file.
+> `lower_case_with_underscores`.
+
+### Constants and Environment Variable Names
+
+> `ALL_CAPS_WITH_UNDERSCORES`, declared at the top of the file.
 
 ```shell script
 # Constant
@@ -184,11 +191,15 @@ readonly PATH_TO_FILES='/some/path'
 declare -xr ORACLE_SID='PROD'
 ```
 
-- Source Filenames: `lower_case_with_underscores`
-  e.g. `maketemplate` or `make_template` but NOT `make-template`.
+### Source Filenames
 
-- Read-only Variables
-  Use `readonly` or `declare -r` to ensure they're read only.
+> `lower_case_with_underscores`.
+
+e.g. `maketemplate` or `make_template` but NOT `make-template`.
+
+### Read-only Variables
+
+> Use `readonly` or `declare -r` to ensure they're read only.
 
 ```shell script
 # As globals are widely used in shell,
