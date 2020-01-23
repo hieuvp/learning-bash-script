@@ -212,9 +212,18 @@ declare -xr ORACLE_SID='PROD'
 - Read-only Variables
   Use `readonly` or `declare -r` to ensure they're read only.
 
-- Use Local Variables
-  Declare function-specific variables with local.
-  Declaration and assignment should be on different lines.
+```shell script
+# As globals are widely used in shell,
+# it's important to catch errors when working with them
+# When you declare a variable that is meant to be read-only,
+# make this explicit
+zip_version="$(dpkg --status zip | grep Version: | cut -d ' ' -f 2)"
+if [[ -z "${zip_version}" ]]; then
+  error_message
+else
+  readonly zip_version
+fi
+```
 
 ## Reading Input
 
