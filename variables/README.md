@@ -10,7 +10,6 @@
 - [Using Variables in A Script](#using-variables-in-a-script)
 - [Using Variables: Good Habits](#using-variables-good-habits)
 - [Naming Conventions](#naming-conventions)
-  - [Source Filenames](#source-filenames)
   - [Variable Names](#variable-names)
   - [Constants and Environment Variable Names](#constants-and-environment-variable-names)
   - [Read-only Variables](#read-only-variables)
@@ -175,11 +174,6 @@ Use `$HOME` instead of `~`
 
 ## Naming Conventions
 
-### Source Filenames
-
-- `lower_case_with_underscores`.
-- e.g. `maketemplate` or `make_template` but not _`make-template`_.
-
 ### Variable Names
 
 - `lower_case_with_underscores`.
@@ -199,7 +193,7 @@ declare -xr ORACLE_SID='PROD'
 
 ### Read-only Variables
 
-- Use `readonly` or `declare -r` to ensure they're read only.
+- Use `readonly` or `declare -r` to ensure they are read only.
 
 ```shell script
 # As globals are widely used in shell,
@@ -227,13 +221,14 @@ read
 
 ## Debugging your Script
 
+- Use `-x` option in hashbang line
 - `#!/bin/bash -x`
+
 - `set -x pipefail`
 
 To debug several lines:
 
-- set `-x`
-- set `+x`
+- Use `set -x` to enable and `set +x` to disable
 
 ## Summary
 
@@ -255,11 +250,6 @@ Using variables
 Reading input
 
 - read
-
-Debugging
-
-- Use `-x` option in hashbang line
-- Or use `"set -x"` to enable and `"set +x"` to disable
 
 ## References
 
