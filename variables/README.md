@@ -82,10 +82,6 @@ Uppercase variables:
 - PATH, HOME, SECONDS, IFS, etc.
 - You don't want to override them by mistake
 
-Good habit
-
-- Use lower-case names for your variables
-
 ## Using Variables in A Script
 
 <!-- AUTO-GENERATED-CONTENT:START (CODE:src=labs/take-note.sh) -->
@@ -238,18 +234,10 @@ Variables
 - Get value `($)`
 - No whitespace around `=`
 
-Variable names
-
-- Use lowercase names
-
 Using variables
 
 - Quotes
 - Braces
-
-Reading input
-
-- read
 
 ## References
 
