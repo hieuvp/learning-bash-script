@@ -9,6 +9,7 @@
 - [Variable Basics](#variable-basics)
 - [Using Variables in A Script](#using-variables-in-a-script)
 - [Using Variables: Good Habits](#using-variables-good-habits)
+- [Naming Conventions](#naming-conventions)
 - [Reading Input](#reading-input)
 - [Debugging your Script](#debugging-your-script)
 - [Summary](#summary)
@@ -178,7 +179,6 @@ Considering camelCase
 More here:
 
 - <https://stackoverflow.com/questions/673055/correct-bash-and-shell-script-variable-capitalization>
-- <https://google.github.io/styleguide/shell.xml>
 
 Keeping to this convention,
 you can rest assured that you don't need to know every environment variable
@@ -190,6 +190,24 @@ especially when they are shared across multiple scripts or processes.
 
 - Exported variables with a common prefix: JOB_HOME JOB_LOG JOB_TEMP JOB_RUN_CONTROL
 - Constants: LOG_DEBUG LOG_INFO LOG_ERROR STATUS_OK STATUS_ERROR STATUS_WARNING
+
+## Naming Conventions
+
+- Variable Names
+  Lower-case, with underscores to separate words
+
+- Constants and Environment Variable Names
+  All caps, separated with underscores, declared at the top of the file.
+
+- Source Filenames
+  Lowercase, with underscores to separate words if desired.
+
+- Read-only Variables
+  Use readonly or declare -r to ensure they're read only.
+
+- Use Local Variables
+  Declare function-specific variables with local.
+  Declaration and assignment should be on different lines.
 
 ## Reading Input
 
