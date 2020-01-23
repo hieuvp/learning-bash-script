@@ -178,7 +178,7 @@ Use `$HOME` instead of `~`
 ### Source Filenames
 
 - `lower_case_with_underscores`.
-  e.g. `maketemplate` or `make_template` but NOT `make-template`.
+- e.g. `maketemplate` or `make_template` but not ~~`make-template`~~.
 
 ### Variable Names
 
