@@ -40,6 +40,7 @@ Learning declaration
 - declare
 - mapfile
 - readonly
+- eval
 
 Learning loop
 
@@ -51,6 +52,7 @@ Printing
 - echo -en
 - echo
 - printf
+- `printf " -%.0s" {1..35}`
 
 If
 
@@ -58,15 +60,17 @@ If
 - [
 - test
 - !
+- `if ! status "."; then`
 
 Learning compare operators
 
 - <https://linuxize.com/post/how-to-compare-strings-in-bash/>
 - -eq, -gt, ...
 - =~
+- =~ ^[a-zA-Z]+\$
 - ==
 - !=
-- != _"nothing to commit, working tree clean"_
+- `!= *"Your branch is up to date with"*`
 - ...
 
 Learning
@@ -92,7 +96,15 @@ Learning export
 
 - export
 - export -f
+- `bash -c main`
 - ...
+
+`while getopts 'w' option; do`
+
+```bash
+declare_submodule_paths="$(declare -p SUBMODULE_PATHS)"
+export declare_submodule_paths
+```
 
 ## Makefile
 
