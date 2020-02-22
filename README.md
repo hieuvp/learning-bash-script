@@ -25,6 +25,75 @@
 1. [ ] [Fun with Strings](fun-with-strings/README.md)
 1. [ ] [Many Ways to Run Your Script](many-ways-to-run-your-script/README.md)
 
+Learning string
+
+- awk
+- sed
+- cut
+- xargs -L 1: to trim string
+- grep
+- ...
+
+Learning declaration
+
+- local
+- declare
+- mapfile
+- readonly
+
+Learning loop
+
+- for
+- while
+
+Printing
+
+- echo -en
+- echo
+- printf
+
+If
+
+- [[
+- [
+- test
+- !
+
+Learning compare operators
+
+- <https://linuxize.com/post/how-to-compare-strings-in-bash/>
+- -eq, -gt, ...
+- =~
+- ==
+- !=
+- != _"nothing to commit, working tree clean"_
+- ...
+
+Learning
+
+- &&
+- ||
+- &
+- |
+
+Learning
+
+- Subshell `()`
+- Grouping `{ command }`
+
+Learning
+
+- `case $answer in`
+- `if`
+
+Learning array
+
+Learning export
+
+- export
+- export -f
+- ...
+
 ## Makefile
 
 ## References
