@@ -31,6 +31,13 @@ Learning string
 - sed
 - cut
 - xargs -L 1: to trim string
+
+```text
+# xargs:
+# - Take output of a command and pass it as argument to another command
+# - If no command is specified, "xargs" executes "echo" by default
+```
+
 - grep
 - ...
 
