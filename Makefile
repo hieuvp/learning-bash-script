@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-include .env
+NAME := learning-bash-script
 
-NAME = learning-bash-script
-
-=======
->>>>>>> master
 .PHONY: fmt
 fmt:
 	@printf "\n"
