@@ -6,6 +6,3 @@
 
 # Operating System
 .DS_Store
-
-# Local Environment Variables
-.env
