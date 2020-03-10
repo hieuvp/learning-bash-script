@@ -5,11 +5,14 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-- [Introduction](#introduction)
 - [Demo: Variables](#demo-variables)
 - [Variable Basics](#variable-basics)
 - [Using Variables in A Script](#using-variables-in-a-script)
 - [Using Variables: Good Habits](#using-variables-good-habits)
+- [Naming Conventions](#naming-conventions)
+  - [Variable Names](#variable-names)
+  - [Constants and Environment Variable Names](#constants-and-environment-variable-names)
+  - [Read-only Variables](#read-only-variables)
 - [Reading Input](#reading-input)
 - [Debugging your Script](#debugging-your-script)
 - [Summary](#summary)
@@ -17,20 +20,225 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## Introduction
-
 ## Demo: Variables
+
+<!-- AUTO-GENERATED-CONTENT:START (CODE:src=labs/demo.sh) -->
+<!-- The below code snippet is automatically added from labs/demo.sh -->
+
+```sh
+#!/usr/bin/env bash
+
+greeting="Good morning"
+echo "$greeting, $USER"
+
+user_greeting="$greeting, $USER"
+echo "$user_greeting"
+
+# Case sensitive
+# echo "$greeting, $user"
+
+# Finding more global variables as USER above
+# Pre-defined variables are all UPPERCASE
+```
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
+```shell script
+man read
+
+# Bash Builtins
+man builtins
+
+# Help is a bash built-in
+# providing help for bash commands only
+help read # For Bash
+$ bash
+bash-5.0$ help read
+
+run-help read # For ZSH
+```
+
+```shell script
+$ labs/demo.sh
+Good morning, hieu.van
+Good morning,
+```
 
 ## Variable Basics
 
+Bash variables have no type
+
+- Basically just store a string
+
+Names:
+
+- Only letters, numbers, and underscore are allowed
+- First character should be a letter or an underscore
+- Variable names are case-sensitive
+
+Uppercase variables:
+
+- Bash has many pre-defined variables
+- PATH, HOME, SECONDS, IFS, etc.
+- You don't want to override them by mistake
+
 ## Using Variables in A Script
+
+<!-- AUTO-GENERATED-CONTENT:START (CODE:src=labs/take-note.sh) -->
+<!-- The below code snippet is automatically added from labs/take-note.sh -->
+
+```sh
+#!/usr/bin/env bash
+
+set -eoux pipefail
+
+# Get the date
+# date=$(date)
+
+# Ask user for input
+# read -r note
+
+# -p prompt
+read -r -p "Your note: " note
+
+# echo "$note"
+
+# help read
+
+# echo $date: $note >> ~/$topicnotes.txt
+# echo $date: $note >> ~/"${topic}"notes.txt
+# Reason for using "{}" ?
+# Another kind? (), ...?
+
+echo Note saved: "$note"
+
+cat notes.txt
+
+##!/bin/bash
+#
+## Simple note-taking script
+## Author: reindert
+#
+## get the date
+#date=$(date)
+#
+## get the topic
+#topic="$1"
+#
+## filename to write to
+#filename="${HOME}/${topic}notes.txt"
+#
+## Ask user for input
+#read -p "Your note: " note
+#
+#echo "$date: $note" >> "$filename"
+#echo "Note '$note' saved to $filename"
+```
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
+- `quotes` vs `double quotes`. What the difference?
+  - single quotes escape every character between them.
+
+```shell script
+$ echo '$note'
+# $note
+
+echo \'$note'\
+```
 
 ## Using Variables: Good Habits
 
+Surround your variables with quotes
+
+- Use `"$x"` instead of `$x`
+- Prevent surprises when it contains spaces
+- Use double quotes: keep meaning of dollar sign intact
+
+Braces `{}`
+
+- Where does your variable name end?
+- `echo "${foo}bar"`
+- prints value of var `"foo"` followed by string `"bar"`
+- `echo "$foobar"` prints value of `"foobar"`
+- Using braces a lot is a Good Habit
+
+Use `$HOME` instead of `~`
+
+- Some context, like using double quotes, the `~` may not be expanded by bash
+  and give an unexpected result.
+
+## Naming Conventions
+
+### Variable Names
+
+- `lower_case_with_underscores`.
+
+### Constants and Environment Variable Names
+
+- `ALL_CAPS_WITH_UNDERSCORES`.
+- Declared at the top of the file.
+
+```shell script
+# Constant
+readonly PATH_TO_FILES='/some/path'
+
+# Both constant and environment
+declare -xr ORACLE_SID='PROD'
+```
+
+### Read-only Variables
+
+- Use `readonly` or `declare -r` to ensure they are read only.
+
+```shell script
+# As globals are widely used in shell,
+# it's important to catch errors when working with them
+# When you declare a variable that is meant to be read-only,
+# make this explicit
+zip_version="$(dpkg --status zip | grep Version: | cut -d ' ' -f 2)"
+if [[ -z "${zip_version}" ]]; then
+  error_message
+else
+  readonly zip_version
+fi
+```
+
 ## Reading Input
+
+read
+
+- Reads a line of input into a variable
+- `read var`
+- Is a shell builtin
+- `help read`
+- `man builtins`
+- `read -p "Type your name:" name`
 
 ## Debugging your Script
 
+- Use `-x` option in hashbang line
+- `#!/bin/bash -x`
+
+- `set -x pipefail`
+
+To debug several lines:
+
+- Use `set -x` to enable and `set +x` to disable
+
 ## Summary
 
+Variables
+
+- Assign value
+- Get value `($)`
+- No whitespace around `=`
+
+Using variables
+
+- Quotes
+- Braces
+
 ## References
+
+- [Shell Style Guide](https://google.github.io/styleguide/shell.xml)

@@ -14,7 +14,8 @@
 ## Bash
 
 1. [ ] [A First Look at Shell Scripts](a-first-look-at-shell-scripts/README.md)
-1. [ ] [Variables](variables/README.md)
+1. [Variables](variables/README.md)
+1. [Brackets](brackets/README.md)
 1. [ ] [If, Then, Else](if-then-else/README.md)
 1. [ ] [Input and Output](input-and-output/README.md)
 1. [ ] [Control Flow](control-flow/README.md)
@@ -23,6 +24,105 @@
 1. [ ] [Shell Functions](shell-functions/README.md)
 1. [ ] [Fun with Strings](fun-with-strings/README.md)
 1. [ ] [Many Ways to Run Your Script](many-ways-to-run-your-script/README.md)
+
+Learning string
+
+- awk
+- sed
+- cut
+- xargs -L 1: to trim string
+
+```text
+# xargs:
+# - Take output of a command and pass it as argument to another command
+# - If no command is specified, "xargs" executes "echo" by default
+```
+
+- grep
+- ...
+
+Learning declaration
+
+- local
+- declare
+- mapfile
+- readonly
+- eval
+
+Learning loop
+
+- for
+- while
+
+Printing
+
+- echo -en
+- echo
+- printf
+- `printf " -%.0s" {1..35}`
+
+If
+
+- [[
+- [
+- test
+- !
+- `if ! status "."; then`
+
+Learning compare operators
+
+- <https://linuxize.com/post/how-to-compare-strings-in-bash/>
+- -eq, -gt, ...
+- =~
+- =~ ^[a-zA-Z]+\$
+- ==
+- !=
+- `!= *"Your branch is up to date with"*`
+- ...
+
+Learning
+
+- &&
+- ||
+- &
+- |
+
+Learning
+
+- Subshell `()`
+- Grouping `{ command }`
+
+Learning
+
+- `case $answer in`
+- `if`
+
+Learning array
+
+Learning export
+
+- export
+- export -f
+- `bash -c main`
+- ...
+
+`while getopts 'w' option; do`
+
+```bash
+declare_submodule_paths="$(declare -p SUBMODULE_PATHS)"
+export declare_submodule_paths
+```
+
+- `https://linuxize.com/post/how-to-compare-strings-in-bash/`
+
+- Parameter Expansion
+  `https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_02`
+  `${parameter+word} --> substitute word --> substitute word --> substitute null`
+
+- `https://fvue.nl/wiki/Bash:_Error_%60Unbound_variable%27_when_testing_unset_variable`
+  `Bash: Error Unbound variable when testing unset variable`
+
+- Process Substitution
 
 ## Makefile
 
