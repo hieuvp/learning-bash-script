@@ -1,0 +1,9 @@
+$ labs/array.sh
+
+${cheeses[1]} = swiss
+
+$cheese = cheddar
+$cheese = swiss
+$cheese = provolone
+$cheese = brie
+$cheese = american

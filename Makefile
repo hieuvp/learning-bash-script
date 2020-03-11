@@ -1,5 +1,3 @@
-NAME := learning-bash-script
-
 .PHONY: fmt
 fmt:
 	@printf "\n"
@@ -17,15 +15,11 @@ lint:
 	@printf "\n"
 
 .PHONY: git-add
-git-add: fmt lint
+git-add: output fmt lint
 	@printf "\n"
 	git add --all .
 	@printf "\n"
 
 .PHONY: output
 output:
-	scripts/output.sh brackets/labs
-
-.PHONY: clean
-clean:
-	rm -rf output
+	scripts/output.sh brackets labs

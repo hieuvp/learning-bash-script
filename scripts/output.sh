@@ -7,26 +7,30 @@
 args=("$@")
 set -eou pipefail
 
-readonly OUTPUT_DIR="output"
-readonly SCRIPT_DIR="${args[0]}"
+readonly WORKING_DIR="${args[0]}"
+readonly SCRIPT_DIR="${args[1]}"
 
-FILES=$(git ls-files | grep -E "^${SCRIPT_DIR}\/.+\.sh$")
+FILES=$(
+  git ls-files \
+    | grep -E "^${WORKING_DIR}/${SCRIPT_DIR}/.+\.sh$" \
+    | xargs -L 1 -I _ realpath --relative-to="${WORKING_DIR}" _
+)
+
 readarray -t FILES < <(printf "%s" "$FILES")
 declare -ra FILES
 
 main() {
   local output_file
-  local output_dir
+
+  cd "$WORKING_DIR"
 
   for file in "${FILES[@]}"; do
-    output_file="${OUTPUT_DIR}/${file}.console"
-    output_dir=$(dirname "$output_file")
 
-    if ! [[ -d $output_dir ]]; then
-      echo "Creating ${output_dir}"
-      mkdir -p "${output_dir}"
-    fi
+    output_file=$(
+      echo "${file}" | sed -E "s/^(.+)\.sh$/\1\.console/"
+    )
 
+    rm -f "${output_file}"
     printf "$ %s\n\n" "${file}" > "${output_file}"
     bash -c "${file}" >> "${output_file}"
   done

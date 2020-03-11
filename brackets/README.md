@@ -36,8 +36,8 @@ Because it’s within a subshell,
 if you have it inside a loop,
 it will run a little slower than if you called the commands without the parentheses.
 
-<!-- AUTO-GENERATED-CONTENT:START (CODE:src=./labs/single-parentheses-subshell.sh) -->
-<!-- The below code snippet is automatically added from ./labs/single-parentheses-subshell.sh -->
+<!-- AUTO-GENERATED-CONTENT:START (CODE:src=./labs/subshell.sh) -->
+<!-- The below code snippet is automatically added from ./labs/subshell.sh -->
 
 ```sh
 #!/usr/bin/env bash
@@ -60,11 +60,11 @@ echo "$str"
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
-<!-- AUTO-GENERATED-CONTENT:START (CODE:src=../output/brackets/labs/single-parentheses-subshell.sh.console) -->
-<!-- The below code snippet is automatically added from ../output/brackets/labs/single-parentheses-subshell.sh.console -->
+<!-- AUTO-GENERATED-CONTENT:START (CODE:src=./labs/subshell.console) -->
+<!-- The below code snippet is automatically added from ./labs/subshell.console -->
 
 ```console
-$ brackets/labs/single-parentheses-subshell.sh
+$ labs/subshell.sh
 
 ShopBack
 Harrison Van
@@ -82,8 +82,8 @@ so that I try to steer Bash newbies clear of
 their usage unless they're definitely the right tool to use.
 But, for completeness's sake:
 
-<!-- AUTO-GENERATED-CONTENT:START (CODE:src=./labs/single-parentheses-array.sh) -->
-<!-- The below code snippet is automatically added from ./labs/single-parentheses-array.sh -->
+<!-- AUTO-GENERATED-CONTENT:START (CODE:src=./labs/array.sh) -->
+<!-- The below code snippet is automatically added from ./labs/array.sh -->
 
 ```sh
 #!/usr/bin/env bash
@@ -99,6 +99,23 @@ cheeses+=("american")
 for cheese in "${cheeses[@]}"; do
   printf "\$cheese = %s\n" "$cheese"
 done
+```
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
+<!-- AUTO-GENERATED-CONTENT:START (CODE:src=./labs/array.console) -->
+<!-- The below code snippet is automatically added from ./labs/array.console -->
+
+```console
+$ labs/array.sh
+
+${cheeses[1]} = swiss
+
+$cheese = cheddar
+$cheese = swiss
+$cheese = provolone
+$cheese = brie
+$cheese = american
 ```
 
 <!-- AUTO-GENERATED-CONTENT:END -->
