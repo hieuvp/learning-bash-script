@@ -15,11 +15,11 @@ lint:
 	@printf "\n"
 
 .PHONY: git-add
-git-add: output fmt lint
+git-add: generate fmt lint
 	@printf "\n"
 	git add --all .
 	@printf "\n"
 
-.PHONY: output
-output:
-	scripts/output.sh brackets labs
+.PHONY: generate
+generate:
+	scripts/console.sh brackets labs

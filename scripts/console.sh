@@ -20,20 +20,15 @@ readarray -t FILES < <(printf "%s" "$FILES")
 declare -ra FILES
 
 main() {
-  local output_file
-
-  cd "$WORKING_DIR"
+  local output
 
   for file in "${FILES[@]}"; do
+    output=$(echo "${file}" | sed -E "s/^(.+)\.sh$/\1\.console/")
 
-    output_file=$(
-      echo "${file}" | sed -E "s/^(.+)\.sh$/\1\.console/"
-    )
-
-    rm -f "${output_file}"
-    printf "harrison@shopback:~$ %s\n\n" "${file}" > "${output_file}"
-    bash -c "${file}" >> "${output_file}"
+    printf "harrison@shopback:~$ %s\n\n" "${file}" > "${output}"
+    bash -c "${file}" >> "${output}"
   done
 }
 
+cd "$WORKING_DIR"
 main
