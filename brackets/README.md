@@ -27,14 +27,15 @@
 
 ### Subshell
 
-Running commands inside in a subshell.
-This means that they run through all of the commands inside,
-and then return a single exit code.
+- Running commands inside in a subshell.
+  This means that they run through all the commands inside,
+  and then return a single exit code.
 
-Any variables declared or environment changes will get cleaned up and disappeared.
-Because it’s within a subshell,
-if you have it inside a loop,
-it will run a little slower than if you called the commands without the parentheses.
+- Any variables declared or environment changes will get cleaned up and disappeared.
+
+- Because it's within a subshell,
+  if you have it inside a loop,
+  it will run a little slower than if you called the commands without the parentheses.
 
 <!-- AUTO-GENERATED-CONTENT:START (CODE:src=./labs/subshell.sh) -->
 <!-- The below code snippet is automatically added from ./labs/subshell.sh -->
