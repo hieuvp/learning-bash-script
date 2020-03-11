@@ -31,7 +31,7 @@ main() {
     )
 
     rm -f "${output_file}"
-    printf "$ %s\n\n" "${file}" > "${output_file}"
+    printf "harrison@shopback:~$ %s\n\n" "${file}" > "${output_file}"
     bash -c "${file}" >> "${output_file}"
   done
 }

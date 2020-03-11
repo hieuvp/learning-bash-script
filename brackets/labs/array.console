@@ -1,4 +1,4 @@
-$ labs/array.sh
+harrison@shopback:~$ labs/array.sh
 
 ${cheeses[1]} = swiss
 

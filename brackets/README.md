@@ -64,7 +64,7 @@ echo "$str"
 <!-- The below code snippet is automatically added from ./labs/subshell.console -->
 
 ```console
-$ labs/subshell.sh
+harrison@shopback:~$ labs/subshell.sh
 
 ShopBack
 Harrison Van
@@ -107,7 +107,7 @@ done
 <!-- The below code snippet is automatically added from ./labs/array.console -->
 
 ```console
-$ labs/array.sh
+harrison@shopback:~$ labs/array.sh
 
 ${cheeses[1]} = swiss
 
