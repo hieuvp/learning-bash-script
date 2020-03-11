@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-# Ideas:
-# - Generate Script Execution Output
-# - Put into markdown for auto-generation markdown
-
 args=("$@")
 set -eou pipefail
 
@@ -13,7 +9,7 @@ readonly SCRIPT_DIR="${args[1]}"
 FILES=$(
   git ls-files \
     | grep -E "^${WORKING_DIR}/${SCRIPT_DIR}/.+\.sh$" \
-    | xargs -L 1 -I _ realpath --relative-to="${WORKING_DIR}" _
+    | xargs -L 1 -I _ realpath --relative-to="$WORKING_DIR" _
 )
 
 readarray -t FILES < <(printf "%s" "$FILES")
@@ -25,8 +21,8 @@ main() {
   for file in "${FILES[@]}"; do
     output=$(echo "${file}" | sed -E "s/^(.+)\.sh$/\1\.console/")
 
-    printf "harrison@shopback:~$ %s\n\n" "${file}" > "${output}"
-    bash -c "${file}" >> "${output}"
+    printf "harrison@shopback:~$ %s\n\n" "$file" > "$output"
+    bash -c "$file" >> "$output"
   done
 }
 
