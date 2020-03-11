@@ -60,6 +60,18 @@ echo "$str"
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
+<!-- AUTO-GENERATED-CONTENT:START (CODE:src=../output/brackets/labs/single-parentheses-subshell.sh.console) -->
+<!-- The below code snippet is automatically added from ../output/brackets/labs/single-parentheses-subshell.sh.console -->
+
+```console
+$ brackets/labs/single-parentheses-subshell.sh
+
+ShopBack
+Harrison Van
+```
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
 ### Array
 
 The second usage is in declaring arrays.
