@@ -9,10 +9,11 @@
   - [Subshell](#subshell)
   - [Array](#array)
 - [`(( Double Parentheses ))`](#-double-parentheses-)
-  - [Arithmetic](#arithmetic)
+  - [Arithmetic Expansion](#arithmetic-expansion)
 - [`<( Angle Parentheses )`](#-angle-parentheses-)
   - [Process Substitution](#process-substitution)
 - [`$( Dollar Single Parentheses )`](#-dollar-single-parentheses-)
+  - [Command Substitution](#command-substitution)
 - [`$( Dollar Single Parentheses Dollar Q )$?`](#-dollar-single-parentheses-dollar-q-)
 - [`$(( Dollar Double Parentheses ))`](#-dollar-double-parentheses-)
 - [`[ Single Square Brackets ]`](#-single-square-brackets-)
@@ -136,7 +137,7 @@ if you see it in somebody's Bash script, though. :)
 
 ## `(( Double Parentheses ))`
 
-### Arithmetic
+### Arithmetic Expansion
 
 This is for use in integer arithmetic.
 You can perform assignments, logical operations, and mathematic operations
@@ -248,6 +249,45 @@ harrison@shopback:~$ labs/process_substitution.sh
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 ## `$( Dollar Single Parentheses )`
+
+### Command Substitution
+
+This is for interpolating a subshell command output into a string.
+The command inside gets run inside a subshell,
+and then any output gets placed into whatever string you're building.
+
+<!-- AUTO-GENERATED-CONTENT:START (CODE:src=./labs/command_substitution.sh) -->
+<!-- The below code snippet is automatically added from ./labs/command_substitution.sh -->
+
+```sh
+#!/usr/bin/env bash
+
+set -eou pipefail
+
+# intro="My name is $( whoami )"
+# echo "$intro"
+# => My name is ryan
+
+# And just to prove that it's a subshell...
+# a=5
+# b=$( a=1000; echo $a )
+# echo "$b"
+# => 1000
+
+# echo $a
+# => 5
+```
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
+<!-- AUTO-GENERATED-CONTENT:START (CODE:src=./labs/command_substitution.console) -->
+<!-- The below code snippet is automatically added from ./labs/command_substitution.console -->
+
+```console
+harrison@shopback:~$ labs/command_substitution.sh
+```
+
+<!-- AUTO-GENERATED-CONTENT:END -->
 
 ## `$( Dollar Single Parentheses Dollar Q )$?`
 
