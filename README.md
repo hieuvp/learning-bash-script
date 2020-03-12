@@ -122,8 +122,6 @@ export declare_submodule_paths
 - `https://fvue.nl/wiki/Bash:_Error_%60Unbound_variable%27_when_testing_unset_variable`
   `Bash: Error Unbound variable when testing unset variable`
 
-- Process Substitution
-
 ## Makefile
 
 ## References

@@ -11,6 +11,7 @@
 - [`(( Double Parentheses ))`](#-double-parentheses-)
   - [Arithmetic](#arithmetic)
 - [`<( Angle Parentheses )`](#-angle-parentheses-)
+  - [Process Substitution](#process-substitution)
 - [`$( Dollar Single Parentheses )`](#-dollar-single-parentheses-)
 - [`$( Dollar Single Parentheses Dollar Q )$?`](#-dollar-single-parentheses-dollar-q-)
 - [`$(( Dollar Double Parentheses ))`](#-dollar-double-parentheses-)
@@ -193,6 +194,58 @@ harrison@shopback:~$ labs/arithmetic.sh
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 ## `<( Angle Parentheses )`
+
+### Process Substitution
+
+This is known as a process substitution.
+It's a lot like a pipe, except you can use it anywhere a command expects a file argument.
+And you can use multiple at once!
+
+This works because the sort command expects one or many filenames as arguments.
+Behind the scenes, the `<( stuff )` actually outputs
+the name of a temporary file (unnamed pipe file) for the sort command to use.
+
+Another example of where this comes in handy is the use of the comm command,
+which spits out the lines that the files have in common.
+Because comm needs its input files to be sorted, you could either do this:
+
+<!-- AUTO-GENERATED-CONTENT:START (CODE:src=./labs/process_substitution.sh) -->
+<!-- The below code snippet is automatically added from ./labs/process_substitution.sh -->
+
+```sh
+#!/usr/bin/env bash
+
+set -eou pipefail
+
+# sort -nr -k 5 <(ls -l /bin) <(ls -l /usr/bin) <(ls -l /sbin)
+
+# => Like a billion lines of output that contain many of the
+# => executables on your computer, sorted in order of descending size.
+
+# Just in case you don't magically remember all bash flags,
+# -nr  means sort numerically in reverse (descending) order
+# -k 5 means sort by Kolumn 5.  In this case, for `ls -l`, that is the "file size"
+
+# The lame way
+# sort file1 > file1.sorted
+# sort file2 > file2.sorted
+# comm -12 file1.sorted file2.sorted
+
+# Ooooor, you can be a total BAshMF and do it this way:
+# The baller way
+# comm -12 <( sort file1 ) <( sort file2 )
+```
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
+<!-- AUTO-GENERATED-CONTENT:START (CODE:src=./labs/process_substitution.console) -->
+<!-- The below code snippet is automatically added from ./labs/process_substitution.console -->
+
+```console
+harrison@shopback:~$ labs/process_substitution.sh
+```
+
+<!-- AUTO-GENERATED-CONTENT:END -->
 
 ## `$( Dollar Single Parentheses )`
 
