@@ -291,6 +291,18 @@ harrison@shopback:~$ labs/command_substitution.sh
 
 ## `$( Dollar Single Parentheses Dollar Q )$?`
 
+If you want to interpolate a command,
+but only the exit code and not the value, this is what you use.
+
+Although, really, this isn't so much a special bracket pattern
+as it is an interesting use of `$?`,
+since the above works even if there is a space between the `$( stuff )` and the `$?`.
+But a neat tip, nonetheless.
+
+However, in Bash, if statements will process the then branch
+if the expression after if has an exit code of 0 and the else branch otherwise,
+so, in this case, Matthew notes that we can drop all of the fancy stuff and simplify to:
+
 ## `$(( Dollar Double Parentheses ))`
 
 ## `[ Single Square Brackets ]`
@@ -310,6 +322,8 @@ What is a heredoc?
 ## References
 
 - [Bash Brackets Quick Reference](https://www.assertnotmagic.com/2018/06/20/bash-brackets-quick-reference)
+
+- [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html)
 
 - <https://www.linux.com/tutorials/all-about-curly-braces-bash/>
   `{Curly Braces}`

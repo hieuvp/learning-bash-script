@@ -23,3 +23,7 @@ git-add: fmt lint
 	@printf "\n"
 	git add --all .
 	@printf "\n"
+
+.PHONY: clean
+clean:
+	scripts/clean.sh
