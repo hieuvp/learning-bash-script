@@ -9,6 +9,7 @@
   - [Subshell](#subshell)
   - [Array](#array)
 - [`(( Double Parentheses ))`](#-double-parentheses-)
+  - [Arithmetic](#arithmetic)
 - [`<( Angle Parentheses )`](#-angle-parentheses-)
 - [`$( Dollar Single Parentheses )`](#-dollar-single-parentheses-)
 - [`$( Dollar Single Parentheses Dollar Q )$?`](#-dollar-single-parentheses-dollar-q-)
@@ -133,6 +134,63 @@ This should give you enough of a feel to not freak out
 if you see it in somebody's Bash script, though. :)
 
 ## `(( Double Parentheses ))`
+
+### Arithmetic
+
+This is for use in integer arithmetic.
+You can perform assignments, logical operations, and mathematic operations
+like multiplication or modulo inside these parentheses.
+However, do note that there is no output.
+Any variable changes that happen inside them will stick,
+but don't expect to be able to assign the result to anything.
+If the result inside is non-zero, it returns a zero (success) exit code.
+If the result inside is zero, it returns an exit code of 1.
+
+<!-- AUTO-GENERATED-CONTENT:START (CODE:src=./labs/arithmetic.sh) -->
+<!-- The below code snippet is automatically added from ./labs/arithmetic.sh -->
+
+```sh
+#!/usr/bin/env bash
+
+set -eou pipefail
+
+i=4
+((i += 3))
+echo $i
+# => 7
+
+((4 + 8))
+# => No Output
+echo $? # Check the exit code of the last command
+# => 0
+
+# ((5 - 5))
+# echo $?
+# => 1
+
+# Strings inside get considered 'zero'.
+#((i += POO))
+#echo $i
+# => 7
+
+# You can't use it in an expression
+# a=(( 4 + 1 ))
+# => bash: syntax error near unexpected token '('
+```
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
+<!-- AUTO-GENERATED-CONTENT:START (CODE:src=./labs/arithmetic.console) -->
+<!-- The below code snippet is automatically added from ./labs/arithmetic.console -->
+
+```console
+harrison@shopback:~$ labs/arithmetic.sh
+
+7
+0
+```
+
+<!-- AUTO-GENERATED-CONTENT:END -->
 
 ## `<( Angle Parentheses )`
 

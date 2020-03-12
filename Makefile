@@ -5,6 +5,10 @@ fmt:
 	@printf "\n"
 
 	@printf "\n"
+	scripts/console.sh brackets labs
+	@printf "\n"
+
+	@printf "\n"
 	$(MAKEFILE_SCRIPT_PATH)/fmt-markdown.sh
 	@printf "\n"
 
@@ -15,11 +19,7 @@ lint:
 	@printf "\n"
 
 .PHONY: git-add
-git-add: generate fmt lint
+git-add: fmt lint
 	@printf "\n"
 	git add --all .
 	@printf "\n"
-
-.PHONY: generate
-generate:
-	scripts/console.sh brackets labs
