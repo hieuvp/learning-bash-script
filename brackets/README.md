@@ -329,11 +329,6 @@ What is a heredoc?
 ## References
 
 - [Bash Brackets Quick Reference](https://www.assertnotmagic.com/2018/06/20/bash-brackets-quick-reference)
-
 - [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html)
-
-- <https://www.linux.com/tutorials/all-about-curly-braces-bash/>
-  `{Curly Braces}`
-  `parenthesis ()`
-
-- <https://linuxconfig.org/bash-scripting-parenthesis-explained>
+- [All about {Curly Braces} in Bash](https://www.linux.com/tutorials/all-about-curly-braces-bash)
+- [BASH Scripting: Parenthesis Explained](https://linuxconfig.org/bash-scripting-parenthesis-explained)

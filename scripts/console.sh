@@ -3,6 +3,9 @@
 args=("$@")
 set -eou pipefail
 
+# shellcheck disable=SC1090
+source "${HELPER_SCRIPT_PATH}/init.sh"
+
 readonly WORKING_DIR="${args[0]}"
 readonly SCRIPT_DIR="${args[1]}"
 
@@ -16,15 +19,22 @@ readarray -t FILES < <(printf "%s" "$FILES")
 declare -ra FILES
 
 main() {
-  local output
+  local -r file=$1
+  local -r output=$(
+    echo "${file}" \
+      | sed -E "s/^(.+)\.sh$/\1\.console/"
+  )
 
-  for file in "${FILES[@]}"; do
-    output=$(echo "${file}" | sed -E "s/^(.+)\.sh$/\1\.console/")
-
-    printf "harrison@shopback:~$ %s\n\n" "$file" > "$output"
-    bash -c "$file" >> "$output"
-  done
+  printf "harrison@shopback:~$ %s\n\n" "$file" > "$output"
+  bash -c "$file" >> "$output"
 }
 
-cd "$WORKING_DIR"
-main
+for file in "${FILES[@]}"; do
+  text::yellow "Processing : $file"
+  printf "\n"
+
+  (
+    cd "$WORKING_DIR"
+    main "$file"
+  )
+done
