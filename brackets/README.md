@@ -291,6 +291,13 @@ harrison@shopback:~$ labs/command_substitution.sh
 
 ## `$( Dollar Single Parentheses Dollar Q )$?`
 
+What is `$?` ?
+
+- <https://riptutorial.com/bash/example/16889/-->
+- The exit status of the last executed function or command.
+  Usually 0 will mean OK anything else will indicate a failure:
+- Expands to the decimal exit status of the most recent pipeline.
+
 If you want to interpolate a command,
 but only the exit code and not the value, this is what you use.
 
