@@ -54,13 +54,13 @@ str="Harrison Van"
 
 (
   # shellcheck disable=SC2030
-  # SC2030: Modification of str is local (to subshell caused by (..) group).
+  # SC2030: modification of str is local (to subshell caused by (..) group)
   str="ShopBack"
   echo "$str"
 )
 
 # shellcheck disable=SC2031
-# SC2031: str was modified in a subshell. That change might be lost.
+# SC2031: str was modified in a subshell, that change might be lost
 echo "$str"
 ```
 
@@ -200,8 +200,8 @@ harrison@shopback:~$ labs/arithmetic.sh
 
 ### Process Substitution
 
-This is known as a process substitution.
-It's a lot like a pipe, except you can use it anywhere a command expects a file argument.
+It is a lot like a pipe,
+except you can use it anywhere a command expects a file argument.
 And you can use multiple at once!
 
 This works because the sort command expects one or many filenames as arguments.
