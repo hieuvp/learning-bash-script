@@ -15,6 +15,7 @@
 - [`$( Dollar Single Parentheses )`](#-dollar-single-parentheses-)
   - [Command Substitution](#command-substitution)
 - [`$( Dollar Single Parentheses Dollar Q )$?`](#-dollar-single-parentheses-dollar-q-)
+  - [Exit Status](#exit-status)
 - [`$(( Dollar Double Parentheses ))`](#-dollar-double-parentheses-)
 - [`[ Single Square Brackets ]`](#-single-square-brackets-)
 - [`[[ Double Square Brackets ]]`](#-double-square-brackets-)
@@ -210,8 +211,8 @@ Another example of where this comes in handy is the use of the comm command,
 which spits out the lines that the files have in common.
 Because comm needs its input files to be sorted, you could either do this:
 
-<!-- AUTO-GENERATED-CONTENT:START (CODE:src=./labs/process_substitution.sh) -->
-<!-- The below code snippet is automatically added from ./labs/process_substitution.sh -->
+<!-- AUTO-GENERATED-CONTENT:START (CODE:src=./labs/process-substitution.sh) -->
+<!-- The below code snippet is automatically added from ./labs/process-substitution.sh -->
 
 ```sh
 #!/usr/bin/env bash
@@ -239,11 +240,11 @@ set -eou pipefail
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
-<!-- AUTO-GENERATED-CONTENT:START (CODE:src=./labs/process_substitution.console) -->
-<!-- The below code snippet is automatically added from ./labs/process_substitution.console -->
+<!-- AUTO-GENERATED-CONTENT:START (CODE:src=./labs/process-substitution.console) -->
+<!-- The below code snippet is automatically added from ./labs/process-substitution.console -->
 
 ```console
-harrison@shopback:~$ labs/process_substitution.sh
+harrison@shopback:~$ labs/process-substitution.sh
 ```
 
 <!-- AUTO-GENERATED-CONTENT:END -->
@@ -256,8 +257,8 @@ This is for interpolating a subshell command output into a string.
 The command inside gets run inside a subshell,
 and then any output gets placed into whatever string you're building.
 
-<!-- AUTO-GENERATED-CONTENT:START (CODE:src=./labs/command_substitution.sh) -->
-<!-- The below code snippet is automatically added from ./labs/command_substitution.sh -->
+<!-- AUTO-GENERATED-CONTENT:START (CODE:src=./labs/command-substitution.sh) -->
+<!-- The below code snippet is automatically added from ./labs/command-substitution.sh -->
 
 ```sh
 #!/usr/bin/env bash
@@ -280,23 +281,33 @@ set -eou pipefail
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
-<!-- AUTO-GENERATED-CONTENT:START (CODE:src=./labs/command_substitution.console) -->
-<!-- The below code snippet is automatically added from ./labs/command_substitution.console -->
+<!-- AUTO-GENERATED-CONTENT:START (CODE:src=./labs/command-substitution.console) -->
+<!-- The below code snippet is automatically added from ./labs/command-substitution.console -->
 
 ```console
-harrison@shopback:~$ labs/command_substitution.sh
+harrison@shopback:~$ labs/command-substitution.sh
 ```
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 ## `$( Dollar Single Parentheses Dollar Q )$?`
 
+### Exit Status
+
 What is `$?` ?
 
 - <https://riptutorial.com/bash/example/16889/-->
-- The exit status of the last executed function or command.
+
+- `$?` is a built-in variable that stores
+  the exit status of the last executed function or command.
   Usually 0 will mean OK anything else will indicate a failure:
 - Expands to the decimal exit status of the most recent pipeline.
+
+`$?` reads the exit status of the last command executed.
+After a function returns,
+`$?` gives the exit status of the last command executed in the function.
+This is Bash's way of giving functions a "return value."
+It returns 0 on success or an integer in the range 1 - 255 on error.
 
 If you want to interpolate a command,
 but only the exit code and not the value, this is what you use.
@@ -309,6 +320,50 @@ But a neat tip, nonetheless.
 However, in Bash, if statements will process the then branch
 if the expression after if has an exit code of 0 and the else branch otherwise,
 so, in this case, Matthew notes that we can drop all of the fancy stuff and simplify to:
+
+<!-- AUTO-GENERATED-CONTENT:START (CODE:src=./labs/exit-status.sh) -->
+<!-- The below code snippet is automatically added from ./labs/exit-status.sh -->
+
+```sh
+#!/usr/bin/env bash
+
+set -eoux pipefail
+
+#ls *.blah
+#echo $?
+#
+#ls
+#echo $?
+#testfile1 testfile2
+#0
+
+##!/usr/bin/env bash
+#
+#set -eou pipefail
+#
+#if [[ $(grep -q PATTERN FILE)$? ]]; then
+#  echo "Dat pattern was totally in dat file!"
+#else
+#  echo "NOPE."
+#fi
+#
+## if grep -q PATTERN FILE; then
+##   echo "Vee haf found eet!"
+## else
+##   echo "No.  Lame."
+## fi
+```
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
+<!-- AUTO-GENERATED-CONTENT:START (CODE:src=./labs/exit-status.console) -->
+<!-- The below code snippet is automatically added from ./labs/exit-status.console -->
+
+```console
+harrison@shopback:~$ labs/exit-status.sh
+```
+
+<!-- AUTO-GENERATED-CONTENT:END -->
 
 ## `$(( Dollar Double Parentheses ))`
 
