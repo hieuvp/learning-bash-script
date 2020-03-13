@@ -16,6 +16,7 @@
   - [Command Substitution](#command-substitution)
 - [`$( Dollar Single Parentheses Dollar Q )$?`](#-dollar-single-parentheses-dollar-q-)
   - [Exit Status](#exit-status)
+  - [Command Exit Code](#command-exit-code)
 - [`$(( Dollar Double Parentheses ))`](#-dollar-double-parentheses-)
 - [`[ Single Square Brackets ]`](#-single-square-brackets-)
 - [`[[ Double Square Brackets ]]`](#-double-square-brackets-)
@@ -255,7 +256,7 @@ harrison@shopback:~$ labs/process-substitution.sh
 
 This is for interpolating a subshell command output into a string.
 The command inside gets run inside a subshell,
-and then any output gets placed into whatever string you're building.
+and then any output gets placed into whatever string you are building.
 
 <!-- AUTO-GENERATED-CONTENT:START (CODE:src=./labs/command-substitution.sh) -->
 <!-- The below code snippet is automatically added from ./labs/command-substitution.sh -->
@@ -300,18 +301,6 @@ harrison@shopback:~$ labs/command-substitution.sh
 - This is Bash's way of giving functions a `return value`.
   It returns `0` on success, or an integer in the range `1 - 255` on error.
 
-If you want to interpolate a command,
-but only the exit code and not the value, this is what you use.
-
-Although, really, this isn't so much a special bracket pattern
-as it is an interesting use of `$?`,
-since the above works even if there is a space between the `$( stuff )` and the `$?`.
-But a neat tip, nonetheless.
-
-However, in Bash, if statements will process the then branch
-if the expression after if has an exit code of 0 and the else branch otherwise,
-so, in this case, Matthew notes that we can drop all of the fancy stuff and simplify to:
-
 <!-- AUTO-GENERATED-CONTENT:START (CODE:src=./labs/exit-status.sh) -->
 <!-- The below code snippet is automatically added from ./labs/exit-status.sh -->
 
@@ -327,22 +316,6 @@ printf "\n"
 echo "$ cat /dev/null"
 cat /dev/null
 printf "\$? = %s\n" "$?"
-
-##!/usr/bin/env bash
-#
-#set -eou pipefail
-#
-#if [[ $(grep -q PATTERN FILE)$? ]]; then
-#  echo "Dat pattern was totally in dat file!"
-#else
-#  echo "NOPE."
-#fi
-#
-## if grep -q PATTERN FILE; then
-##   echo "Vee haf found eet!"
-## else
-##   echo "No.  Lame."
-## fi
 ```
 
 <!-- AUTO-GENERATED-CONTENT:END -->
@@ -359,6 +332,57 @@ $? = 1
 
 $ cat /dev/null
 $? = 0
+```
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
+### Command Exit Code
+
+If you want to interpolate a command,
+but only the exit code and not the value, this is what you use.
+
+<!-- AUTO-GENERATED-CONTENT:START (CODE:src=./labs/command-exit-code.sh) -->
+<!-- The below code snippet is automatically added from ./labs/command-exit-code.sh -->
+
+```sh
+#!/usr/bin/env bash
+
+set -eou pipefail
+
+if [[ $(grep -q PATTERN FILE)$? ]]; then
+  echo "Dat pattern was totally in dat file!"
+else
+  echo "NOPE."
+fi
+
+# since the above works even if
+# there is a space between the `$( stuff )` and the `$?`.
+# But a neat tip, nonetheless.
+
+# However, in Bash, if statements will process the then branch
+# if the expression after if has an exit code of 0 and the else branch otherwise,
+# so, in this case,
+# we can drop all the fancy stuff and simplify to:
+
+if grep -q PATTERN FILE; then
+  echo "Vee haf found eet!"
+else
+  echo "No.  Lame."
+fi
+```
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
+<!-- AUTO-GENERATED-CONTENT:START (CODE:src=./labs/command-exit-code.console) -->
+<!-- The below code snippet is automatically added from ./labs/command-exit-code.console -->
+
+```console
+harrison@shopback:~$ labs/command-exit-code.sh
+
+grep: FILE: No such file or directory
+Dat pattern was totally in dat file!
+grep: FILE: No such file or directory
+No.  Lame.
 ```
 
 <!-- AUTO-GENERATED-CONTENT:END -->
