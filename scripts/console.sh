@@ -26,7 +26,9 @@ main() {
   )
 
   printf "harrison@shopback:~$ %s\n\n" "$file" > "$output"
-  bash -c "$file" >> "$output"
+
+  # https://stackoverflow.com/questions/876239/how-to-redirect-and-append-both-stdout-and-stderr-to-a-file-with-bash
+  bash -c "$file" >> "$output" 2>&1
 }
 
 for file in "${FILES[@]}"; do

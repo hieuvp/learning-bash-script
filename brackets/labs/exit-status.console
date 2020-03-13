@@ -1,2 +1,8 @@
 harrison@shopback:~$ labs/exit-status.sh
 
+$ cat /dev/non-null
+cat: /dev/non-null: No such file or directory
+$? = 1
+
+$ cat /dev/null
+$? = 0

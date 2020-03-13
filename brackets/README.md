@@ -294,20 +294,11 @@ harrison@shopback:~$ labs/command-substitution.sh
 
 ### Exit Status
 
-What is `$?` ?
-
-- <https://riptutorial.com/bash/example/16889/-->
-
-- `$?` is a built-in variable that stores
+- `$?` is a built-in variable that gives
   the exit status of the last executed function or command.
-  Usually 0 will mean OK anything else will indicate a failure:
-- Expands to the decimal exit status of the most recent pipeline.
 
-`$?` reads the exit status of the last command executed.
-After a function returns,
-`$?` gives the exit status of the last command executed in the function.
-This is Bash's way of giving functions a "return value."
-It returns 0 on success or an integer in the range 1 - 255 on error.
+- This is Bash's way of giving functions a `return value`.
+  It returns `0` on success, or an integer in the range `1 - 255` on error.
 
 If you want to interpolate a command,
 but only the exit code and not the value, this is what you use.
@@ -327,15 +318,15 @@ so, in this case, Matthew notes that we can drop all of the fancy stuff and simp
 ```sh
 #!/usr/bin/env bash
 
-set -eoux pipefail
+echo "$ cat /dev/non-null"
+cat /dev/non-null
+printf "\$? = %s\n" "$?"
 
-#ls *.blah
-#echo $?
-#
-#ls
-#echo $?
-#testfile1 testfile2
-#0
+printf "\n"
+
+echo "$ cat /dev/null"
+cat /dev/null
+printf "\$? = %s\n" "$?"
 
 ##!/usr/bin/env bash
 #
@@ -361,6 +352,13 @@ set -eoux pipefail
 
 ```console
 harrison@shopback:~$ labs/exit-status.sh
+
+$ cat /dev/non-null
+cat: /dev/non-null: No such file or directory
+$? = 1
+
+$ cat /dev/null
+$? = 0
 ```
 
 <!-- AUTO-GENERATED-CONTENT:END -->

@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
-set -eoux pipefail
+echo "$ cat /dev/non-null"
+cat /dev/non-null
+printf "\$? = %s\n" "$?"
 
-#ls *.blah
-#echo $?
-#
-#ls
-#echo $?
-#testfile1 testfile2
-#0
+printf "\n"
+
+echo "$ cat /dev/null"
+cat /dev/null
+printf "\$? = %s\n" "$?"
 
 ##!/usr/bin/env bash
 #
