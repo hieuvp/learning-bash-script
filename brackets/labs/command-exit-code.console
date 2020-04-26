@@ -1,0 +1,6 @@
+harrison@shopback:~$ labs/command-exit-code.sh
+
+grep: FILE: No such file or directory
+Dat pattern was totally in dat file!
+grep: FILE: No such file or directory
+No.  Lame.

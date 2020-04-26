@@ -5,6 +5,10 @@ fmt:
 	@printf "\n"
 
 	@printf "\n"
+	scripts/console.sh brackets labs
+	@printf "\n"
+
+	@printf "\n"
 	$(MAKEFILE_SCRIPT_PATH)/fmt-markdown.sh
 	@printf "\n"
 
@@ -19,3 +23,7 @@ git-add: fmt lint
 	@printf "\n"
 	git add --all .
 	@printf "\n"
+
+.PHONY: clean
+clean:
+	scripts/clean.sh
